@@ -2,9 +2,10 @@
 //  CadavreExquis4iOSViewController.m
 //  CadavreExquis4iOS
 //
+//  テクスト生成アルゴリズム及び辞書データの著作権はAkiyoshi Sumi氏に属します。
 //  Created by shinjuku yui on 11/08/13.
+//  Copyrught © 1994 by Akiyoshi Sumi All Rights reserved.
 //  Copyright 2011年 Tragile Eden. All rights reserved.
-//  テクスト生成アルゴリズム及び辞書データの著作権は
 //
 
 #import "CadavreExquis4iOSViewController.h"
@@ -13,8 +14,8 @@
 @synthesize textView;
 
 #pragma mark - dictionary licensed by 
-// 辞書データはHyperCardスタック「優美なる死体 v2.1」からコピーしました。
-// 辞書データの著作権は
+// 辞書データはHyperCardスタック「優美なる死体 v2.1」から作成しました。
+// 初期辞書データの著作権はAkiyoshi Sumi氏に属します。
 - (void) initialize {
     // とりあえず配列に辞書を作る。あとでCoreDataに変更する。
     sentences = [[NSArray arrayWithObjects:
@@ -970,7 +971,7 @@
 }
 #pragma mark - algorithm licensed by
 // テクスト生成アルゴリズムはHyperCardスタック「優美なる死体 v2.1」からObjective-Cに移植しました。
-// このアルゴリズムの著作権は
+// このアルゴリズムの著作権はAkiyoshi Sumi氏に属します。
 -(NSString*) numbering:(NSString*) target {
     BOOL isFirst = YES;
     while (YES) {

@@ -24,8 +24,8 @@
 		BA43876C13F693B300C65633 /* CadavreExquis4iOSTests.h in Resources */ = {isa = PBXBuildFile; fileRef = BA43876B13F693B300C65633 /* CadavreExquis4iOSTests.h */; };
 		BA43876E13F693B300C65633 /* CadavreExquis4iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA43876D13F693B300C65633 /* CadavreExquis4iOSTests.m */; };
 		BA43877F13F6B6BF00C65633 /* ce4ios.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA43877E13F6B6BF00C65633 /* ce4ios.jpg */; };
-		BA50F96313F6BEBF002A9917 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA50F96213F6BEBF002A9917 /* icon.png */; };
 		BA8733BD13F8EAB6004D526C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8733BC13F8EAB6004D526C /* icon.png */; };
+		BA8733BF13F8FF30004D526C /* iconRatina.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8733BE13F8FF30004D526C /* iconRatina.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +60,8 @@
 		BA43876B13F693B300C65633 /* CadavreExquis4iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CadavreExquis4iOSTests.h; sourceTree = "<group>"; };
 		BA43876D13F693B300C65633 /* CadavreExquis4iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CadavreExquis4iOSTests.m; sourceTree = "<group>"; };
 		BA43877E13F6B6BF00C65633 /* ce4ios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ce4ios.jpg; path = images/ce4ios.jpg; sourceTree = SOURCE_ROOT; };
-		BA50F96213F6BEBF002A9917 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = images/icon.png; sourceTree = SOURCE_ROOT; };
 		BA8733BC13F8EAB6004D526C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		BA8733BE13F8FF30004D526C /* iconRatina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconRatina.png; sourceTree = "<group>"; };
 		BA90806A13F7D2C200036030 /* Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dictionary.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +93,7 @@
 		BA43872E13F693B200C65633 = {
 			isa = PBXGroup;
 			children = (
+				BA8733BE13F8FF30004D526C /* iconRatina.png */,
 				BA8733BC13F8EAB6004D526C /* icon.png */,
 				BA43874313F693B300C65633 /* CadavreExquis4iOS */,
 				BA43876513F693B300C65633 /* CadavreExquis4iOSTests */,
@@ -144,7 +145,6 @@
 				BA43874913F693B300C65633 /* main.m */,
 				BA43874B13F693B300C65633 /* CadavreExquis4iOS-Prefix.pch */,
 				BA43877E13F6B6BF00C65633 /* ce4ios.jpg */,
-				BA50F96213F6BEBF002A9917 /* icon.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -242,8 +242,8 @@
 				BA43875113F693B300C65633 /* MainWindow.xib in Resources */,
 				BA43875713F693B300C65633 /* CadavreExquis4iOSViewController.xib in Resources */,
 				BA43877F13F6B6BF00C65633 /* ce4ios.jpg in Resources */,
-				BA50F96313F6BEBF002A9917 /* icon.png in Resources */,
 				BA8733BD13F8EAB6004D526C /* icon.png in Resources */,
+				BA8733BF13F8FF30004D526C /* iconRatina.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

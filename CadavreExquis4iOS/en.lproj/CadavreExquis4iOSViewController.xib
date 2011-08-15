@@ -142,10 +142,9 @@
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIEditable">NO</bool>
-						<string type="base64-UTF8" key="IBUIText">T3JpZ2luYWwgd29ya3MuCkNvcHlyaWdodCDCqTE5OTQgYnkgQFNob2Jvbm5lTm8xMCBBbGwgUmlnaHRz
-IFJlc2VydmVkLgpQb3J0aW5nIGZvciBpT1MuCkNvcHlyaWdodCByZW5vdW5jZWQgMjAxMSBieSBUcmFn
-aWxlLWVkZW4uCuKAqEJhY2tncm91bmQgaW1hZ2UgYW5kIGljb24gYnkgUGV0ZXIgUGF1bCBSdWJlbnMu
-A</string>
+						<string type="base64-UTF8" key="IBUIText">T3JpZ2luYWwgd29ya3MuCkNvcHlyaWdodCDCqSAxOTk0IGJ5IEFraXlvc2hpIFN1bWkgQWxsIFJpZ2h0
+cyBSZXNlcnZlZC4KUG9ydGluZyBmb3IgaU9TLgpDb3B5cmlnaHQgwqkgMjAxMSBieSBUcmFnaWxlLWVk
+ZW4uCuKAqEJhY2tncm91bmQgaW1hZ2UgYW5kIGljb24gYnkgUGV0ZXIgUGF1bCBSdWJlbnMuA</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAwLjk4NDYxNjcwNCAwLjk3MjM5NDIyMjUgMAA</bytes>
