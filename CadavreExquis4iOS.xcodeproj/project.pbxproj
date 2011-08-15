@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA43873E13F693B300C65633 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43873D13F693B300C65633 /* UIKit.framework */; };
+		BA43874013F693B300C65633 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43873F13F693B300C65633 /* Foundation.framework */; };
+		BA43874213F693B300C65633 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43874113F693B300C65633 /* CoreGraphics.framework */; };
+		BA43874813F693B300C65633 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA43874613F693B300C65633 /* InfoPlist.strings */; };
+		BA43874A13F693B300C65633 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA43874913F693B300C65633 /* main.m */; };
+		BA43874E13F693B300C65633 /* CadavreExquis4iOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA43874D13F693B300C65633 /* CadavreExquis4iOSAppDelegate.m */; };
+		BA43875113F693B300C65633 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA43874F13F693B300C65633 /* MainWindow.xib */; };
+		BA43875413F693B300C65633 /* CadavreExquis4iOSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA43875313F693B300C65633 /* CadavreExquis4iOSViewController.m */; };
+		BA43875713F693B300C65633 /* CadavreExquis4iOSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA43875513F693B300C65633 /* CadavreExquis4iOSViewController.xib */; };
+		BA43875F13F693B300C65633 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43875E13F693B300C65633 /* SenTestingKit.framework */; };
+		BA43876013F693B300C65633 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43873D13F693B300C65633 /* UIKit.framework */; };
+		BA43876113F693B300C65633 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43873F13F693B300C65633 /* Foundation.framework */; };
+		BA43876213F693B300C65633 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43874113F693B300C65633 /* CoreGraphics.framework */; };
+		BA43876A13F693B300C65633 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA43876813F693B300C65633 /* InfoPlist.strings */; };
+		BA43876C13F693B300C65633 /* CadavreExquis4iOSTests.h in Resources */ = {isa = PBXBuildFile; fileRef = BA43876B13F693B300C65633 /* CadavreExquis4iOSTests.h */; };
+		BA43876E13F693B300C65633 /* CadavreExquis4iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA43876D13F693B300C65633 /* CadavreExquis4iOSTests.m */; };
+		BA43877F13F6B6BF00C65633 /* ce4ios.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA43877E13F6B6BF00C65633 /* ce4ios.jpg */; };
+		BA50F96313F6BEBF002A9917 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA50F96213F6BEBF002A9917 /* icon.png */; };
+		BA8733BD13F8EAB6004D526C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8733BC13F8EAB6004D526C /* icon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA43876313F693B300C65633 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA43873013F693B200C65633 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA43873813F693B300C65633;
+			remoteInfo = CadavreExquis4iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA43873913F693B300C65633 /* CadavreExquis4iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CadavreExquis4iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA43873D13F693B300C65633 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BA43873F13F693B300C65633 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BA43874113F693B300C65633 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BA43874513F693B300C65633 /* CadavreExquis4iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CadavreExquis4iOS-Info.plist"; sourceTree = "<group>"; };
+		BA43874713F693B300C65633 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA43874913F693B300C65633 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BA43874B13F693B300C65633 /* CadavreExquis4iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CadavreExquis4iOS-Prefix.pch"; sourceTree = "<group>"; };
+		BA43874C13F693B300C65633 /* CadavreExquis4iOSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CadavreExquis4iOSAppDelegate.h; sourceTree = "<group>"; };
+		BA43874D13F693B300C65633 /* CadavreExquis4iOSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CadavreExquis4iOSAppDelegate.m; sourceTree = "<group>"; };
+		BA43875013F693B300C65633 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		BA43875213F693B300C65633 /* CadavreExquis4iOSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CadavreExquis4iOSViewController.h; sourceTree = "<group>"; };
+		BA43875313F693B300C65633 /* CadavreExquis4iOSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CadavreExquis4iOSViewController.m; sourceTree = "<group>"; };
+		BA43875613F693B300C65633 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CadavreExquis4iOSViewController.xib; sourceTree = "<group>"; };
+		BA43875D13F693B300C65633 /* CadavreExquis4iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CadavreExquis4iOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA43875E13F693B300C65633 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		BA43876713F693B300C65633 /* CadavreExquis4iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CadavreExquis4iOSTests-Info.plist"; sourceTree = "<group>"; };
+		BA43876913F693B300C65633 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA43876B13F693B300C65633 /* CadavreExquis4iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CadavreExquis4iOSTests.h; sourceTree = "<group>"; };
+		BA43876D13F693B300C65633 /* CadavreExquis4iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CadavreExquis4iOSTests.m; sourceTree = "<group>"; };
+		BA43877E13F6B6BF00C65633 /* ce4ios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ce4ios.jpg; path = images/ce4ios.jpg; sourceTree = SOURCE_ROOT; };
+		BA50F96213F6BEBF002A9917 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = images/icon.png; sourceTree = SOURCE_ROOT; };
+		BA8733BC13F8EAB6004D526C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		BA90806A13F7D2C200036030 /* Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dictionary.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA43873613F693B300C65633 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA43873E13F693B300C65633 /* UIKit.framework in Frameworks */,
+				BA43874013F693B300C65633 /* Foundation.framework in Frameworks */,
+				BA43874213F693B300C65633 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA43875913F693B300C65633 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA43875F13F693B300C65633 /* SenTestingKit.framework in Frameworks */,
+				BA43876013F693B300C65633 /* UIKit.framework in Frameworks */,
+				BA43876113F693B300C65633 /* Foundation.framework in Frameworks */,
+				BA43876213F693B300C65633 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA43872E13F693B200C65633 = {
+			isa = PBXGroup;
+			children = (
+				BA8733BC13F8EAB6004D526C /* icon.png */,
+				BA43874313F693B300C65633 /* CadavreExquis4iOS */,
+				BA43876513F693B300C65633 /* CadavreExquis4iOSTests */,
+				BA43873C13F693B300C65633 /* Frameworks */,
+				BA43873A13F693B300C65633 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA43873A13F693B300C65633 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA43873913F693B300C65633 /* CadavreExquis4iOS.app */,
+				BA43875D13F693B300C65633 /* CadavreExquis4iOSTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA43873C13F693B300C65633 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA43873D13F693B300C65633 /* UIKit.framework */,
+				BA43873F13F693B300C65633 /* Foundation.framework */,
+				BA43874113F693B300C65633 /* CoreGraphics.framework */,
+				BA43875E13F693B300C65633 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA43874313F693B300C65633 /* CadavreExquis4iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BA43874C13F693B300C65633 /* CadavreExquis4iOSAppDelegate.h */,
+				BA43874D13F693B300C65633 /* CadavreExquis4iOSAppDelegate.m */,
+				BA43874F13F693B300C65633 /* MainWindow.xib */,
+				BA43875213F693B300C65633 /* CadavreExquis4iOSViewController.h */,
+				BA43875313F693B300C65633 /* CadavreExquis4iOSViewController.m */,
+				BA43875513F693B300C65633 /* CadavreExquis4iOSViewController.xib */,
+				BA90806A13F7D2C200036030 /* Dictionary.h */,
+				BA43874413F693B300C65633 /* Supporting Files */,
+			);
+			path = CadavreExquis4iOS;
+			sourceTree = "<group>";
+		};
+		BA43874413F693B300C65633 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA43874513F693B300C65633 /* CadavreExquis4iOS-Info.plist */,
+				BA43874613F693B300C65633 /* InfoPlist.strings */,
+				BA43874913F693B300C65633 /* main.m */,
+				BA43874B13F693B300C65633 /* CadavreExquis4iOS-Prefix.pch */,
+				BA43877E13F6B6BF00C65633 /* ce4ios.jpg */,
+				BA50F96213F6BEBF002A9917 /* icon.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA43876513F693B300C65633 /* CadavreExquis4iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA43876B13F693B300C65633 /* CadavreExquis4iOSTests.h */,
+				BA43876D13F693B300C65633 /* CadavreExquis4iOSTests.m */,
+				BA43876613F693B300C65633 /* Supporting Files */,
+			);
+			path = CadavreExquis4iOSTests;
+			sourceTree = "<group>";
+		};
+		BA43876613F693B300C65633 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA43876713F693B300C65633 /* CadavreExquis4iOSTests-Info.plist */,
+				BA43876813F693B300C65633 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA43873813F693B300C65633 /* CadavreExquis4iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA43877113F693B300C65633 /* Build configuration list for PBXNativeTarget "CadavreExquis4iOS" */;
+			buildPhases = (
+				BA43873513F693B300C65633 /* Sources */,
+				BA43873613F693B300C65633 /* Frameworks */,
+				BA43873713F693B300C65633 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CadavreExquis4iOS;
+			productName = CadavreExquis4iOS;
+			productReference = BA43873913F693B300C65633 /* CadavreExquis4iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA43875C13F693B300C65633 /* CadavreExquis4iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA43877413F693B300C65633 /* Build configuration list for PBXNativeTarget "CadavreExquis4iOSTests" */;
+			buildPhases = (
+				BA43875813F693B300C65633 /* Sources */,
+				BA43875913F693B300C65633 /* Frameworks */,
+				BA43875A13F693B300C65633 /* Resources */,
+				BA43875B13F693B300C65633 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA43876413F693B300C65633 /* PBXTargetDependency */,
+			);
+			name = CadavreExquis4iOSTests;
+			productName = CadavreExquis4iOSTests;
+			productReference = BA43875D13F693B300C65633 /* CadavreExquis4iOSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA43873013F693B200C65633 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Tragile Eden";
+			};
+			buildConfigurationList = BA43873313F693B200C65633 /* Build configuration list for PBXProject "CadavreExquis4iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BA43872E13F693B200C65633;
+			productRefGroup = BA43873A13F693B300C65633 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA43873813F693B300C65633 /* CadavreExquis4iOS */,
+				BA43875C13F693B300C65633 /* CadavreExquis4iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA43873713F693B300C65633 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA43874813F693B300C65633 /* InfoPlist.strings in Resources */,
+				BA43875113F693B300C65633 /* MainWindow.xib in Resources */,
+				BA43875713F693B300C65633 /* CadavreExquis4iOSViewController.xib in Resources */,
+				BA43877F13F6B6BF00C65633 /* ce4ios.jpg in Resources */,
+				BA50F96313F6BEBF002A9917 /* icon.png in Resources */,
+				BA8733BD13F8EAB6004D526C /* icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA43875A13F693B300C65633 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA43876A13F693B300C65633 /* InfoPlist.strings in Resources */,
+				BA43876C13F693B300C65633 /* CadavreExquis4iOSTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA43875B13F693B300C65633 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA43873513F693B300C65633 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA43874A13F693B300C65633 /* main.m in Sources */,
+				BA43874E13F693B300C65633 /* CadavreExquis4iOSAppDelegate.m in Sources */,
+				BA43875413F693B300C65633 /* CadavreExquis4iOSViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA43875813F693B300C65633 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA43876E13F693B300C65633 /* CadavreExquis4iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA43876413F693B300C65633 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA43873813F693B300C65633 /* CadavreExquis4iOS */;
+			targetProxy = BA43876313F693B300C65633 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA43874613F693B300C65633 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA43874713F693B300C65633 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BA43874F13F693B300C65633 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA43875013F693B300C65633 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		BA43875513F693B300C65633 /* CadavreExquis4iOSViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA43875613F693B300C65633 /* en */,
+			);
+			name = CadavreExquis4iOSViewController.xib;
+			sourceTree = "<group>";
+		};
+		BA43876813F693B300C65633 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA43876913F693B300C65633 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA43876F13F693B300C65633 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BA43877013F693B300C65633 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA43877213F693B300C65633 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CadavreExquis4iOS/CadavreExquis4iOS-Prefix.pch";
+				INFOPLIST_FILE = "CadavreExquis4iOS/CadavreExquis4iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BA43877313F693B300C65633 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CadavreExquis4iOS/CadavreExquis4iOS-Prefix.pch";
+				INFOPLIST_FILE = "CadavreExquis4iOS/CadavreExquis4iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BA43877513F693B300C65633 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CadavreExquis4iOS.app/CadavreExquis4iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CadavreExquis4iOS/CadavreExquis4iOS-Prefix.pch";
+				INFOPLIST_FILE = "CadavreExquis4iOSTests/CadavreExquis4iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		BA43877613F693B300C65633 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CadavreExquis4iOS.app/CadavreExquis4iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CadavreExquis4iOS/CadavreExquis4iOS-Prefix.pch";
+				INFOPLIST_FILE = "CadavreExquis4iOSTests/CadavreExquis4iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA43873313F693B200C65633 /* Build configuration list for PBXProject "CadavreExquis4iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA43876F13F693B300C65633 /* Debug */,
+				BA43877013F693B300C65633 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA43877113F693B300C65633 /* Build configuration list for PBXNativeTarget "CadavreExquis4iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA43877213F693B300C65633 /* Debug */,
+				BA43877313F693B300C65633 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA43877413F693B300C65633 /* Build configuration list for PBXNativeTarget "CadavreExquis4iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA43877513F693B300C65633 /* Debug */,
+				BA43877613F693B300C65633 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA43873013F693B200C65633 /* Project object */;
+}

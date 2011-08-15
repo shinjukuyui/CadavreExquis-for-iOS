@@ -1,0 +1,18 @@
+# hidden/temp files
+.DS_Store
+*.swp
+*~.nib
+# build dir
+build/
+# dictionary source
+dictionary/
+# certifications
+certifications/
+# Xcode project files except for the project file
+*.exodeproj/
+!*./xcodeproj/project.xcodeproj
+# user specific project settings
+*.mode1v3
+*.mode2v3
+xcuserdata
+
