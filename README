@@ -1,2 +1,8 @@
-about this project, see ReadMe.txt
-about License, see License and License-algorithmAndDictionary
+Porting CadavreExquis Hypercard stack to iOS.
+Based on CadavreExquis v2.1.
+More details, see ReadMe.txt (written in japanese)
+
+Original works on Hypercard: Akiyoshi Sumi.
+Porting to iOS: shinjukuyui.
+License under Apache License 2.0.
+see License and License-AlgorithmAndDictionary.
