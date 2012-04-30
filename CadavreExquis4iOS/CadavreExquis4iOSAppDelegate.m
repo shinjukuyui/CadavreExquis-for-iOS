@@ -65,9 +65,6 @@
 
 - (void)dealloc
 {
-    [_window release];
-    [_viewController release];
-    [super dealloc];
 }
 
 @end

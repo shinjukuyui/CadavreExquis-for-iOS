@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA1C9335154E437400D01D1C /* Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1C9334154E437400D01D1C /* Dictionary.m */; };
+		BA1C9337154E47BB00D01D1C /* initialData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = BA1C9336154E47BB00D01D1C /* initialData.sqlite */; };
 		BA43873E13F693B300C65633 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43873D13F693B300C65633 /* UIKit.framework */; };
 		BA43874013F693B300C65633 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43873F13F693B300C65633 /* Foundation.framework */; };
 		BA43874213F693B300C65633 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA43874113F693B300C65633 /* CoreGraphics.framework */; };
@@ -26,6 +28,9 @@
 		BA43877F13F6B6BF00C65633 /* ce4ios.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA43877E13F6B6BF00C65633 /* ce4ios.jpg */; };
 		BA8733BD13F8EAB6004D526C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8733BC13F8EAB6004D526C /* icon.png */; };
 		BA8733BF13F8FF30004D526C /* iconRatina.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8733BE13F8FF30004D526C /* iconRatina.png */; };
+		BAA47B6C150E2D62009CE782 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAA47B6A150E2D61009CE782 /* Model.xcdatamodeld */; };
+		BAC454EC150F7A2D00D5DFB7 /* DictionaryProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC454EB150F7A2D00D5DFB7 /* DictionaryProxy.m */; };
+		BAC454EE150F960800D5DFB7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC454ED150F960800D5DFB7 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA1C9333154E437400D01D1C /* Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dictionary.h; sourceTree = "<group>"; };
+		BA1C9334154E437400D01D1C /* Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dictionary.m; sourceTree = "<group>"; };
+		BA1C9336154E47BB00D01D1C /* initialData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = initialData.sqlite; sourceTree = "<group>"; };
 		BA43873913F693B300C65633 /* CadavreExquis4iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CadavreExquis4iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA43873D13F693B300C65633 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BA43873F13F693B300C65633 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,7 +70,10 @@
 		BA43877E13F6B6BF00C65633 /* ce4ios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ce4ios.jpg; path = images/ce4ios.jpg; sourceTree = SOURCE_ROOT; };
 		BA8733BC13F8EAB6004D526C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		BA8733BE13F8FF30004D526C /* iconRatina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconRatina.png; sourceTree = "<group>"; };
-		BA90806A13F7D2C200036030 /* Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dictionary.h; sourceTree = "<group>"; };
+		BAA47B6B150E2D61009CE782 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		BAC454EA150F7A2D00D5DFB7 /* DictionaryProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryProxy.h; sourceTree = "<group>"; };
+		BAC454EB150F7A2D00D5DFB7 /* DictionaryProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryProxy.m; sourceTree = "<group>"; };
+		BAC454ED150F960800D5DFB7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC454EE150F960800D5DFB7 /* CoreData.framework in Frameworks */,
 				BA43873E13F693B300C65633 /* UIKit.framework in Frameworks */,
 				BA43874013F693B300C65633 /* Foundation.framework in Frameworks */,
 				BA43874213F693B300C65633 /* CoreGraphics.framework in Frameworks */,
@@ -114,6 +126,7 @@
 		BA43873C13F693B300C65633 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAC454ED150F960800D5DFB7 /* CoreData.framework */,
 				BA43873D13F693B300C65633 /* UIKit.framework */,
 				BA43873F13F693B300C65633 /* Foundation.framework */,
 				BA43874113F693B300C65633 /* CoreGraphics.framework */,
@@ -131,7 +144,9 @@
 				BA43875213F693B300C65633 /* CadavreExquis4iOSViewController.h */,
 				BA43875313F693B300C65633 /* CadavreExquis4iOSViewController.m */,
 				BA43875513F693B300C65633 /* CadavreExquis4iOSViewController.xib */,
-				BA90806A13F7D2C200036030 /* Dictionary.h */,
+				BAC454EA150F7A2D00D5DFB7 /* DictionaryProxy.h */,
+				BAC454EB150F7A2D00D5DFB7 /* DictionaryProxy.m */,
+				BAA47B68150E2D2F009CE782 /* Resource */,
 				BA43874413F693B300C65633 /* Supporting Files */,
 			);
 			path = CadavreExquis4iOS;
@@ -140,6 +155,7 @@
 		BA43874413F693B300C65633 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BA1C9336154E47BB00D01D1C /* initialData.sqlite */,
 				BA43874513F693B300C65633 /* CadavreExquis4iOS-Info.plist */,
 				BA43874613F693B300C65633 /* InfoPlist.strings */,
 				BA43874913F693B300C65633 /* main.m */,
@@ -166,6 +182,16 @@
 				BA43876813F693B300C65633 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAA47B68150E2D2F009CE782 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BAA47B6A150E2D61009CE782 /* Model.xcdatamodeld */,
+				BA1C9333154E437400D01D1C /* Dictionary.h */,
+				BA1C9334154E437400D01D1C /* Dictionary.m */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +271,7 @@
 				BA43877F13F6B6BF00C65633 /* ce4ios.jpg in Resources */,
 				BA8733BD13F8EAB6004D526C /* icon.png in Resources */,
 				BA8733BF13F8FF30004D526C /* iconRatina.png in Resources */,
+				BA1C9337154E47BB00D01D1C /* initialData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +310,9 @@
 				BA43874A13F693B300C65633 /* main.m in Sources */,
 				BA43874E13F693B300C65633 /* CadavreExquis4iOSAppDelegate.m in Sources */,
 				BA43875413F693B300C65633 /* CadavreExquis4iOSViewController.m in Sources */,
+				BAA47B6C150E2D62009CE782 /* Model.xcdatamodeld in Sources */,
+				BAC454EC150F7A2D00D5DFB7 /* DictionaryProxy.m in Sources */,
+				BA1C9335154E437400D01D1C /* Dictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +416,7 @@
 		BA43877213F693B300C65633 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CadavreExquis4iOS/CadavreExquis4iOS-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -399,6 +430,7 @@
 		BA43877313F693B300C65633 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CadavreExquis4iOS/CadavreExquis4iOS-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -476,6 +508,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BAA47B6A150E2D61009CE782 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BAA47B6B150E2D61009CE782 /* Model.xcdatamodel */,
+			);
+			currentVersion = BAA47B6B150E2D61009CE782 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BA43873013F693B200C65633 /* Project object */;
 }

@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "DictionaryProxy.h"
 
 @interface CadavreExquis4iOSViewController : UIViewController {
     NSString* sentence;
     NSArray* nouns;
     NSArray* qualifications;
     NSArray* sentences;
+    DictionaryProxy* proxy;
 }
-@property (nonatomic, retain) IBOutlet UITextView* textView;
+@property (nonatomic, strong) IBOutlet UITextView* textView;
 -(IBAction)create;
 @end

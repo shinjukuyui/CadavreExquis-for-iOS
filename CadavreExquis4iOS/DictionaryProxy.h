@@ -6,8 +6,20 @@
 //  Copyright (c) 2012年 Tragile Eden. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface Dictionary : NSObject
-
+@interface DictionaryProxy : NSObject {
+    NSManagedObjectContext* context;
+    NSManagedObjectModel* model;
+    NSPersistentStoreCoordinator* coordinator;
+}
+@property (nonatomic, strong, readonly) NSManagedObjectContext* context;
+@property (nonatomic, strong, readonly) NSManagedObjectModel* model;
+@property (nonatomic, strong, readonly) NSPersistentStoreCoordinator* coordinator;
++ (DictionaryProxy*) instance;
+- (NSURL* )applicationDocumentsDirectory;
+- (void) save;
+- (NSString*)select:(int)type;
+- (NSManagedObject*)newEntity;
 @end
