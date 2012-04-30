@@ -17,7 +17,7 @@
 @property (nonatomic, strong, readonly) NSManagedObjectContext* context;
 @property (nonatomic, strong, readonly) NSManagedObjectModel* model;
 @property (nonatomic, strong, readonly) NSPersistentStoreCoordinator* coordinator;
-+ (DictionaryProxy*) instance;
++ (DictionaryProxy*) sharedInstance;
 - (NSURL* )applicationDocumentsDirectory;
 - (void) save;
 - (NSString*)select:(int)type;

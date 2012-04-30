@@ -9,29 +9,36 @@
 #import "DictionaryProxy.h"
 
 @implementation DictionaryProxy
-static DictionaryProxy* instance_ = nil;  
-+ (DictionaryProxy*) instance {  
-    @synchronized(self) {  
-        if (instance_ == nil) {  
-            instance_ = [[self alloc] init];  
-        }  
-    }  
+static DictionaryProxy* instance_ = nil;
+static dispatch_queue_t serialQueue;
++ (DictionaryProxy*) sharedInstance {
+    static dispatch_once_t token;
+    dispatch_once(&token, ^{
+        instance_ = [[self alloc] init];
+    });
     return instance_;
 }
-/*
 + (id) allocWithZone:(NSZone*) zone {  
-    @synchronized(self) {  
-        if (instance_ == nil) {  
-            instance_ = [super allocWithZone:zone];  
-            return instance_;  
-        }  
-    }  
-    return nil;  
-}  
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        serialQueue = dispatch_queue_create("jp.tragile-eden.CadavreExquis.SerialQueue", NULL);        
+        if (instance_ == nil) {
+            instance_ = [super allocWithZone:zone];
+        }
+    });
+    return instance_; 
+}
 - (id) copyWithZone:(NSZone*) zone {  
     return self;
 }
- */
+- (id)init {
+    id __block object;
+    dispatch_sync(serialQueue, ^{
+        object = [super init];
+    });
+    self = object;
+    return self;
+}
 - (void)dealloc {
 }
 #pragma mark -

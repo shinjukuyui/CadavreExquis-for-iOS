@@ -15,11 +15,9 @@
 @synthesize textView;
 
 #pragma mark - dictionary licensed by 
-// 辞書データはHyperCardスタック「優美なる死体 v2.1」から作成しました。
-// 初期辞書データの著作権はAkiyoshi Sumi氏に属します。
 - (void) initialize {
     sentence = nil;
-    proxy = [DictionaryProxy instance];
+    proxy = [DictionaryProxy sharedInstance];
     // 初期データをCoreDataに入れる前の残骸
     sentences = [NSArray arrayWithObjects:@"", nil];
     nouns = [NSArray arrayWithObjects:@"", nil];
@@ -27,7 +25,8 @@
 }
 #pragma mark - algorithm licensed by
 // テクスト生成アルゴリズムはHyperCardスタック「優美なる死体 v2.1」からObjective-Cに移植しました。
-// このアルゴリズムの著作権はAkiyoshi Sumi氏に属します。
+// 初期辞書データはHyperCardスタック「優美なる死体 v2.1」から作成しました。
+// このアルゴリズム及び諸喜寿書データの著作権はAkiyoshi Sumi氏に属します。
 -(NSString*) numbering:(NSString*) target {
     BOOL isFirst = YES;
     while (YES) {
