@@ -2,11 +2,20 @@
 //  Dictionary.h
 //  CadavreExquis4iOS
 //
-//  Created by shinjuku yui on 11/08/14.
-//  Copyright 2011年 Tragile Eden. All rights reserved.
+//  Created by 花木 香織 on 12/04/30.
+//  Copyright (c) 2012年 Tragile Eden. All rights reserved.
 //
 
-#ifndef CadavreExquis4iOS_Dictionary_h
-#define CadavreExquis4iOS_Dictionary_h
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-#endif
+
+@interface Dictionary : NSManagedObject
+
+@property (nonatomic, retain) NSNumber * id;
+@property (nonatomic, retain) NSNumber * initial;
+@property (nonatomic, retain) NSNumber * inUse;
+@property (nonatomic, retain) NSString * sentence;
+@property (nonatomic, retain) NSNumber * type;
+
+@end
