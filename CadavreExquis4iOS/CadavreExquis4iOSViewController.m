@@ -10,6 +10,7 @@
 
 #import "CadavreExquis4iOSViewController.h"
 #import "Dictionary.h"
+#import "History.h"
 
 @implementation CadavreExquis4iOSViewController
 @synthesize textView;
@@ -40,18 +41,25 @@
     }
     return target;
 }
+-(NSString*) getSentenceFromObject:(int)type {
+    NSManagedObject* object = [proxy select:@"Dictionary" withType:type isRandom:YES withLimit:1 ascending:YES];
+    if (object == nil) {
+        return @"";
+    }
+    return [object valueForKey:@"sentence"];
+}
 -(NSString*) createSentence {
-    NSString* creating = [proxy select:0];
+    NSString* creating = [self getSentenceFromObject:0];
     while (YES) {
         NSRange range = [creating rangeOfString:@"*"];
         if (range.location == NSNotFound) {
             break;
         }
-        NSString* noun = [proxy select:1];
+        NSString* noun = [self getSentenceFromObject:1];
         NSString* nounWithQualification = nil;
         int using = rand()%100;
         if (using < 75) {
-            NSString* qualification = [proxy select:2];
+            NSString* qualification = [self getSentenceFromObject:2];
             nounWithQualification = [qualification stringByAppendingString:noun];
         } else {
             nounWithQualification = noun;
@@ -81,7 +89,11 @@
     [super viewDidLoad];
     [textView setEditable:NO];
     [textView setOpaque:YES];
-    textView.alpha = 0.0;
+    [textView setTextAlignment:UITextAlignmentCenter];
+    [textView setTextColor:[UIColor grayColor]];
+    [textView setText:@"タップして開始"];
+    textView.alpha = 0.8;
+    [self adjust];
     [self initialize];
 //    [self createInitialData];
 }
@@ -116,7 +128,7 @@
                 break;
         }
         for (int j = 0; j < [target count]; j++) {
-            Dictionary* dictionary = (Dictionary* )[proxy newEntity];
+            Dictionary* dictionary = (Dictionary* )[proxy newEntity:@"Dictionary"];
             [dictionary setInitial:[NSNumber numberWithBool:YES]];
             [dictionary setInUse:[NSNumber numberWithBool:YES]];
             [dictionary setSentence:[target objectAtIndex:j]];
@@ -128,6 +140,21 @@
     [proxy save];
 }
 #pragma mark - methods
+- (void) addHistory {
+    History* historied = (History*)[proxy select:@"History" withType:-1 isRandom:NO withLimit:1 ascending:NO];
+    int id = 0;
+    if (historied != nil) {
+        id = [historied.id intValue] + 1;
+        if ([historied.id intValue] > 100) {
+            History* removing = (History*)[proxy select:@"History" withType:-1 isRandom:NO withLimit:1 ascending:YES];
+            [proxy remove:removing];
+        }
+    }
+    History* history = (History*)[proxy newEntity:@"History"];
+    [history setId:[NSNumber numberWithInt:id]];
+    [history setSentence:sentence];
+    [proxy save];
+}
 -(void) reset {
     textView.alpha = 0.0;
 }
@@ -152,8 +179,23 @@
 -(IBAction) create {
     [self reset];
     sentence = [self createSentence];
-    [textView setText:sentence];
-    [self adjust];
-    [self redraw];
+    if (sentence != nil) {
+        [textView setText:sentence];
+        [textView setTextAlignment:UITextAlignmentLeft];
+        [textView setTextColor:[UIColor blackColor]];
+        [self addHistory];
+        [self adjust];
+        [self redraw];
+    }
+}
+-(IBAction) home {
+}
+-(IBAction) history {
+}
+-(IBAction) manage {
+}
+-(IBAction) post {
+}
+-(IBAction) about {
 }
 @end

@@ -26,6 +26,9 @@
 		BA43876C13F693B300C65633 /* CadavreExquis4iOSTests.h in Resources */ = {isa = PBXBuildFile; fileRef = BA43876B13F693B300C65633 /* CadavreExquis4iOSTests.h */; };
 		BA43876E13F693B300C65633 /* CadavreExquis4iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA43876D13F693B300C65633 /* CadavreExquis4iOSTests.m */; };
 		BA43877F13F6B6BF00C65633 /* ce4ios.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA43877E13F6B6BF00C65633 /* ce4ios.jpg */; };
+		BA458A50154E620F00358990 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = BA458A4F154E620F00358990 /* History.m */; };
+		BA458A59154E7EC900358990 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA458A58154E7EC900358990 /* BackgroundView.m */; };
+		BA458A5C154E939800358990 /* TextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA458A5B154E939700358990 /* TextView.m */; };
 		BA8733BD13F8EAB6004D526C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8733BC13F8EAB6004D526C /* icon.png */; };
 		BA8733BF13F8FF30004D526C /* iconRatina.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8733BE13F8FF30004D526C /* iconRatina.png */; };
 		BAA47B6C150E2D62009CE782 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAA47B6A150E2D61009CE782 /* Model.xcdatamodeld */; };
@@ -68,6 +71,12 @@
 		BA43876B13F693B300C65633 /* CadavreExquis4iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CadavreExquis4iOSTests.h; sourceTree = "<group>"; };
 		BA43876D13F693B300C65633 /* CadavreExquis4iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CadavreExquis4iOSTests.m; sourceTree = "<group>"; };
 		BA43877E13F6B6BF00C65633 /* ce4ios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ce4ios.jpg; path = images/ce4ios.jpg; sourceTree = SOURCE_ROOT; };
+		BA458A4E154E620F00358990 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
+		BA458A4F154E620F00358990 /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
+		BA458A57154E7EC900358990 /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
+		BA458A58154E7EC900358990 /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		BA458A5A154E939700358990 /* TextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextView.h; sourceTree = "<group>"; };
+		BA458A5B154E939700358990 /* TextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextView.m; sourceTree = "<group>"; };
 		BA8733BC13F8EAB6004D526C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		BA8733BE13F8FF30004D526C /* iconRatina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconRatina.png; sourceTree = "<group>"; };
 		BAA47B6B150E2D61009CE782 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -143,7 +152,10 @@
 				BA43874F13F693B300C65633 /* MainWindow.xib */,
 				BA43875213F693B300C65633 /* CadavreExquis4iOSViewController.h */,
 				BA43875313F693B300C65633 /* CadavreExquis4iOSViewController.m */,
-				BA43875513F693B300C65633 /* CadavreExquis4iOSViewController.xib */,
+				BA458A57154E7EC900358990 /* BackgroundView.h */,
+				BA458A58154E7EC900358990 /* BackgroundView.m */,
+				BA458A5A154E939700358990 /* TextView.h */,
+				BA458A5B154E939700358990 /* TextView.m */,
 				BAC454EA150F7A2D00D5DFB7 /* DictionaryProxy.h */,
 				BAC454EB150F7A2D00D5DFB7 /* DictionaryProxy.m */,
 				BAA47B68150E2D2F009CE782 /* Resource */,
@@ -187,9 +199,12 @@
 		BAA47B68150E2D2F009CE782 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				BA43875513F693B300C65633 /* CadavreExquis4iOSViewController.xib */,
 				BAA47B6A150E2D61009CE782 /* Model.xcdatamodeld */,
 				BA1C9333154E437400D01D1C /* Dictionary.h */,
 				BA1C9334154E437400D01D1C /* Dictionary.m */,
+				BA458A4E154E620F00358990 /* History.h */,
+				BA458A4F154E620F00358990 /* History.m */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -313,6 +328,9 @@
 				BAA47B6C150E2D62009CE782 /* Model.xcdatamodeld in Sources */,
 				BAC454EC150F7A2D00D5DFB7 /* DictionaryProxy.m in Sources */,
 				BA1C9335154E437400D01D1C /* Dictionary.m in Sources */,
+				BA458A50154E620F00358990 /* History.m in Sources */,
+				BA458A59154E7EC900358990 /* BackgroundView.m in Sources */,
+				BA458A5C154E939800358990 /* TextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,4 +19,9 @@
 }
 @property (nonatomic, strong) IBOutlet UITextView* textView;
 -(IBAction)create;
+-(IBAction)home;
+-(IBAction)history;
+-(IBAction)manage;
+-(IBAction)post;
+-(IBAction)about;
 @end

@@ -20,6 +20,7 @@
 + (DictionaryProxy*) sharedInstance;
 - (NSURL* )applicationDocumentsDirectory;
 - (void) save;
-- (NSString*)select:(int)type;
-- (NSManagedObject*)newEntity;
+- (NSManagedObject*) select:(NSString*)entity withType:(int)type isRandom:(BOOL)random withLimit:(int)limit ascending:(BOOL)ascending;
+- (NSManagedObject*)newEntity:(NSString*) name;
+- (void) remove:(NSManagedObject*)entity;
 @end

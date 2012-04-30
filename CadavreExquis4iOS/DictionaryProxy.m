@@ -7,6 +7,12 @@
 //
 
 #import "DictionaryProxy.h"
+#import "History.h"
+
+@interface DictionaryProxy()
+- (NSFetchRequest* ) createRequest:(NSString*)entity withType:(int)type ascending:(BOOL)ascending;
+- (NSUInteger) counts:(NSString*)entity withType:(int)type;
+@end
 
 @implementation DictionaryProxy
 static DictionaryProxy* instance_ = nil;
@@ -105,41 +111,53 @@ static dispatch_queue_t serialQueue;
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 #pragma mark - methods
-- (NSFetchRequest* ) createRequest:(int) type {
+- (NSFetchRequest* ) createRequest:(NSString*)entity withType:(int)type ascending:(BOOL)ascending {
 	NSManagedObjectContext* managedContext = [self context];
     NSFetchRequest* request = [[NSFetchRequest alloc] init];
-    [request setEntity:[NSEntityDescription entityForName:@"Dictionary" inManagedObjectContext:managedContext]];
+    [request setEntity:[NSEntityDescription entityForName:entity inManagedObjectContext:managedContext]];
     [request setIncludesSubentities:NO];
-    NSPredicate* predicate = [NSPredicate predicateWithFormat: [NSString stringWithFormat:@"type = %d", type]];
-    [request setPredicate:predicate];
-	NSSortDescriptor* sort = [[NSSortDescriptor alloc] initWithKey:@"id" ascending:YES];
+    if (type >= 0) {
+        NSPredicate* predicate = [NSPredicate predicateWithFormat: [NSString stringWithFormat:@"type = %d", type]];
+        [request setPredicate:predicate];
+    }
+	NSSortDescriptor* sort = [[NSSortDescriptor alloc] initWithKey:@"id" ascending:ascending];
 	[request setSortDescriptors:[NSArray arrayWithObject:sort]];
     return request;
 }
-- (NSUInteger) counts:(int)type {
+- (NSUInteger) counts:(NSString*)entity withType:(int)type {
 	NSManagedObjectContext* managedContext = [self context];
     NSError* error = nil;
-    NSUInteger count = [managedContext countForFetchRequest:[self createRequest:type] error:&error];
+    NSUInteger count = [managedContext countForFetchRequest:[self createRequest:entity withType:type ascending:YES] error:&error];
     if (count == NSNotFound) {
         count = 0;
     }
     return count;
 }
-- (NSString*) select:(int) type {
-    NSUInteger count = [self counts:type];
-	NSManagedObjectContext* managedContext = [self context];
-    NSFetchRequest* request = [self createRequest:type];
-	[request setFetchLimit:1];
-    [request setFetchOffset:arc4random() % count];
+- (NSManagedObject*) select:(NSString*)entity withType:(int)type isRandom:(BOOL)random withLimit:(int)limit ascending:(BOOL)ascending {
+    NSFetchRequest* request = [self createRequest:entity withType:type ascending:ascending];
+	[request setFetchLimit:limit];
+    if (random == YES) {
+        NSUInteger count = [self counts:entity withType:type];
+        [request setFetchOffset:arc4random() % count];
+    } else {
+    }
 	NSError* error = nil;
+	NSManagedObjectContext* managedContext = [self context];
 	NSMutableArray* mutableFetchResults = [[managedContext executeFetchRequest:request error:&error] mutableCopy];
 	if (mutableFetchResults == nil) {
 		NSLog(@"fetch error.");
 	}
-	return [[mutableFetchResults objectAtIndex:0] valueForKey:@"sentence"];
+    if ([mutableFetchResults count] == 0) {
+        return nil;
+    }
+	return [mutableFetchResults objectAtIndex:0];
 }
-- (NSManagedObject*) newEntity {
+- (NSManagedObject*) newEntity:(NSString*) entity {
 	NSManagedObjectContext* managedContext = [self context];
-	return [NSEntityDescription insertNewObjectForEntityForName:@"Dictionary" inManagedObjectContext:managedContext];
+	return [NSEntityDescription insertNewObjectForEntityForName:entity inManagedObjectContext:managedContext];
+}
+- (void) remove:(NSManagedObject*)entity {
+	NSManagedObjectContext* managedContext = [self context];
+    [managedContext deleteObject:entity];
 }
 @end
