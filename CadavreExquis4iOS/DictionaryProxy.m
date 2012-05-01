@@ -133,6 +133,27 @@ static dispatch_queue_t serialQueue;
     }
     return count;
 }
+- (NSMutableArray*) selectAll:(NSString*)entity withType:(int)type ascending:(BOOL)ascending {
+    NSFetchRequest* request = [self createRequest:entity withType:type ascending:ascending];
+	NSError* error = nil;
+	NSManagedObjectContext* managedContext = [self context];
+	NSMutableArray* mutableFetchResults = [[managedContext executeFetchRequest:request error:&error] mutableCopy];
+	if (mutableFetchResults == nil) {
+		NSLog(@"fetch error.");
+        return nil;
+	}
+    if ([mutableFetchResults count] == 0) {
+        return nil;
+    }
+    return mutableFetchResults;
+}
+- (NSMutableArray*) selectAt:(NSString*)entity withType:(int)type ascending:(BOOL)ascending indexOf:(int)index {
+    NSMutableArray* array = [self selectAll:entity withType:type ascending:ascending];
+    if (array == nil || [array count] == 0) {
+        return nil;
+    }
+    return [array objectAtIndex:index];
+}
 - (NSManagedObject*) select:(NSString*)entity withType:(int)type isRandom:(BOOL)random withLimit:(int)limit ascending:(BOOL)ascending {
     NSFetchRequest* request = [self createRequest:entity withType:type ascending:ascending];
 	[request setFetchLimit:limit];
@@ -146,6 +167,7 @@ static dispatch_queue_t serialQueue;
 	NSMutableArray* mutableFetchResults = [[managedContext executeFetchRequest:request error:&error] mutableCopy];
 	if (mutableFetchResults == nil) {
 		NSLog(@"fetch error.");
+        return nil;
 	}
     if ([mutableFetchResults count] == 0) {
         return nil;

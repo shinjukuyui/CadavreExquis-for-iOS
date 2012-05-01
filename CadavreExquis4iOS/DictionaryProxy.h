@@ -20,6 +20,9 @@
 + (DictionaryProxy*) sharedInstance;
 - (NSURL* )applicationDocumentsDirectory;
 - (void) save;
+- (NSUInteger) counts:(NSString*)entity withType:(int)type;
+- (NSMutableArray*) selectAll:(NSString*)entity withType:(int)type ascending:(BOOL)ascending;
+- (NSMutableArray*) selectAt:(NSString*)entity withType:(int)type ascending:(BOOL)ascending indexOf:(int)index;
 - (NSManagedObject*) select:(NSString*)entity withType:(int)type isRandom:(BOOL)random withLimit:(int)limit ascending:(BOOL)ascending;
 - (NSManagedObject*)newEntity:(NSString*) name;
 - (void) remove:(NSManagedObject*)entity;

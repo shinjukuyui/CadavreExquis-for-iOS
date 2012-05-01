@@ -7,8 +7,8 @@
 //
 
 #import "TextView.h"
-#import "CadavreExquis4iOSAppDelegate.h"
-#import "CadavreExquis4iOSViewController.h"
+#import "AppDelegate.h"
+#import "HomeViewController.h"
 
 @implementation TextView
 
@@ -30,8 +30,8 @@
 }
 */
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    CadavreExquis4iOSAppDelegate* delegate = (CadavreExquis4iOSAppDelegate*)[[UIApplication sharedApplication] delegate];
-    [delegate.viewController create];
+    AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    [delegate.homeViewController create];
 }
 
 @end

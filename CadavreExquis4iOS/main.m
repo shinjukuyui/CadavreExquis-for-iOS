@@ -2,16 +2,17 @@
 //  main.m
 //  CadavreExquis4iOS
 //
-//  Created by shinjuku yui on 11/08/13.
-//  Copyright 2011年 Tragile Eden. All rights reserved.
+//  Created by 花木 香織 on 12/05/01.
+//  Copyright (c) 2012年 Puella-Ex-Machina. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+#import "AppDelegate.h"
+
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        int retVal = UIApplicationMain(argc, argv, nil, nil);
-       return retVal;
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

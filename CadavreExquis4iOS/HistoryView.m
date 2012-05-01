@@ -1,16 +1,14 @@
 //
-//  BackgroundView.m
+//  HistoryView.m
 //  CadavreExquis4iOS
 //
-//  Created by 花木 香織 on 12/04/30.
+//  Created by 花木 香織 on 12/05/01.
 //  Copyright (c) 2012年 Tragile Eden. All rights reserved.
 //
 
-#import "BackgroundView.h"
-#import "AppDelegate.h"
-#import "HomeViewController.h"
+#import "HistoryView.h"
 
-@implementation BackgroundView
+@implementation HistoryView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -29,9 +27,5 @@
     // Drawing code
 }
 */
-- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    [delegate.homeViewController create];
-}
 
 @end

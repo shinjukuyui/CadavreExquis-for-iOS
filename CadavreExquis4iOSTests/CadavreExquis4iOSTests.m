@@ -2,8 +2,8 @@
 //  CadavreExquis4iOSTests.m
 //  CadavreExquis4iOSTests
 //
-//  Created by shinjuku yui on 11/08/13.
-//  Copyright 2011年 Tragile Eden. All rights reserved.
+//  Created by 花木 香織 on 12/05/01.
+//  Copyright (c) 2012年 Puella-Ex-Machina. All rights reserved.
 //
 
 #import "CadavreExquis4iOSTests.h"
