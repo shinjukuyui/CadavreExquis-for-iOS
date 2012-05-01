@@ -47,7 +47,7 @@
     AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     NSString* sentence = [delegate.homeViewController getSentence];
     if (sentence != nil && [sentence length] != 0) {
-        [textView setText:[NSString stringWithFormat:@"以下のテキストを共有します\n\n%@", sentence]];
+        [textView setText:sentence];
         if ([MFMailComposeViewController canSendMail]) {
             [mailButton setEnabled:YES];
         } else {

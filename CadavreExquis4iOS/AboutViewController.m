@@ -6,6 +6,7 @@
 //  Copyright (c) 2012年 Puella-Ex-Machina. All rights reserved.
 //
 
+#include <QuartzCore/QuartzCore.h>
 #import "AboutViewController.h"
 
 @interface AboutViewController ()
@@ -13,6 +14,7 @@
 @end
 
 @implementation AboutViewController
+@synthesize label;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +29,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    label.layer.borderWidth = 1;
+    label.layer.cornerRadius = 7;
+    label.clipsToBounds = YES;
 }
 
 - (void)viewDidUnload
@@ -39,5 +44,7 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
+- (IBAction)help {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://tragile-eden.jp/works/cadavreExquis4iOS/"]]; 
+}
 @end

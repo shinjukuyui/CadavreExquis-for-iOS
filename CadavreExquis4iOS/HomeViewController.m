@@ -147,8 +147,8 @@
     [textView setFrame:frame];
 }
 - (void) redraw {
-    [UIView animateWithDuration:2.0
-                          delay:0.5
+    [UIView animateWithDuration:1.2
+                          delay:0.3
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
                          textView.alpha = 0.8;

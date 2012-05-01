@@ -43,6 +43,7 @@
 		BA2C9CE5154FBFDE004D45C3 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C9CE4154FBFDE004D45C3 /* History.m */; };
 		BA2C9CE8154FBFF8004D45C3 /* TextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C9CE7154FBFF8004D45C3 /* TextView.m */; };
 		BA2C9CF4154FEABF004D45C3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C9CF3154FEABF004D45C3 /* QuartzCore.framework */; };
+		BADB218C15502053005770C5 /* PaddingedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB218B15502053005770C5 /* PaddingedLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		BA2C9CE6154FBFF8004D45C3 /* TextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextView.h; sourceTree = "<group>"; };
 		BA2C9CE7154FBFF8004D45C3 /* TextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextView.m; sourceTree = "<group>"; };
 		BA2C9CF3154FEABF004D45C3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BADB218A15502053005770C5 /* PaddingedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaddingedLabel.h; sourceTree = "<group>"; };
+		BADB218B15502053005770C5 /* PaddingedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaddingedLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,7 @@
 				BA2C9CEC154FC05E004D45C3 /* ActionView */,
 				BA2C9CED154FC06D004D45C3 /* AboutView */,
 				BA2C9CEE154FC083004D45C3 /* Models */,
+				BADB21881550202B005770C5 /* CustomUI */,
 				BA2C9CB4154FBADB004D45C3 /* Resources */,
 				BA2C9C78154FB4AD004D45C3 /* Supporting Files */,
 			);
@@ -293,6 +297,15 @@
 				BA2C9CE4154FBFDE004D45C3 /* History.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		BADB21881550202B005770C5 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				BADB218A15502053005770C5 /* PaddingedLabel.h */,
+				BADB218B15502053005770C5 /* PaddingedLabel.m */,
+			);
+			name = CustomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +437,7 @@
 				BA2C9CE2154FBFCB004D45C3 /* DictionaryProxy.m in Sources */,
 				BA2C9CE5154FBFDE004D45C3 /* History.m in Sources */,
 				BA2C9CE8154FBFF8004D45C3 /* TextView.m in Sources */,
+				BADB218C15502053005770C5 /* PaddingedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

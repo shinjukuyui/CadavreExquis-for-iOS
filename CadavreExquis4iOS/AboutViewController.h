@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AboutViewController : UIViewController
-
+@interface AboutViewController : UIViewController {
+    UILabel* label;    
+}
+@property (nonatomic, strong) IBOutlet UILabel* label;
+- (IBAction)help;
 @end

@@ -1,5 +1,5 @@
 //
-//  DictionaryViewController.h
+//  PaddingedLabel.h
 //  CadavreExquis4iOS
 //
 //  Created by 花木 香織 on 12/05/01.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DictionaryViewController : UINavigationController
+@interface PaddingedLabel : UILabel
 
 @end
