@@ -11,11 +11,11 @@
 @interface DictionaryDetailViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
     DictionaryProxy* proxy;
     UITableView* table;
+    UIBarButtonItem* addButton;
+    UIBarButtonItem* cancelButton;
     NSNumber* type;
 }
 @property(strong, nonatomic) IBOutlet UITableView* table;
+@property(strong, nonatomic) IBOutlet UIBarButtonItem* addButton;
 @property(strong, nonatomic) IBOutlet NSNumber* type;
-- (IBAction) edit;
-- (IBAction) add;
-- (IBAction) remove;
 @end

@@ -176,6 +176,22 @@ static dispatch_queue_t serialQueue;
     }
 	return [mutableFetchResults objectAtIndex:0];
 }
+- (NSManagedObject*) selectById:(NSString*) entity byId:(int)objectId {
+    NSFetchRequest* request = [self createRequest:entity withType:-1 ascending:YES];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat: [NSString stringWithFormat:@"id = %d", objectId]];
+    [request setPredicate:predicate];
+	NSError* error = nil;
+	NSManagedObjectContext* managedContext = [self context];
+	NSMutableArray* mutableFetchResults = [[managedContext executeFetchRequest:request error:&error] mutableCopy];
+	if (mutableFetchResults == nil) {
+		NSLog(@"fetch error.");
+        return nil;
+	}
+    if ([mutableFetchResults count] == 0) {
+        return nil;
+    }
+	return [mutableFetchResults objectAtIndex:0];
+}
 - (NSManagedObject*) newEntity:(NSString*) entity {
 	NSManagedObjectContext* managedContext = [self context];
 	return [NSEntityDescription insertNewObjectForEntityForName:entity inManagedObjectContext:managedContext];

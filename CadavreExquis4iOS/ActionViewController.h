@@ -9,10 +9,12 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
-@interface ActionViewController : UIViewController<MFMailComposeViewControllerDelegate> {
+@interface ActionViewController : UIViewController<UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
     UITextView* textView;
     UIButton* mailButton;
     UIButton* tweetButton;
+    NSArray* twitterAccounts;
+    UIActionSheet* accountSelector;
 }
 @property (nonatomic, strong) IBOutlet UITextView* textView;
 @property (nonatomic, strong) IBOutlet UIButton* mailButton;

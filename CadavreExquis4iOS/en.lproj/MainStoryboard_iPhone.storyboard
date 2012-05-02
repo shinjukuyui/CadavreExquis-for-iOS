@@ -80,7 +80,7 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="FJE-Ae-RCr">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="307"/>
+                                        <rect key="frame" x="20" y="0.0" width="280" height="307"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <mutableString key="text">謝辞
@@ -97,9 +97,12 @@ Copyright © 1994 Akiyoshi Sumi, All Rights Reserved.
 TWG Ratina Icons
 Copyright © 2010 The Working Gorup, Creative Commons BY-SA 3.0.
 
+FBNetworkReachability
+Copyright © 2011 Hiroshi Hashiguchi. MIT License.
+
 iOS版製作
 Copyright © 2012 Tragile-Eden.</mutableString>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -200,7 +203,7 @@ Copyright © 2012 Tragile-Eden.</mutableString>
                         <sections>
                             <tableViewSection id="C8z-HX-iRI">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="templates" textLabel="u21-Ef-oA3" detailTextLabel="hUZ-ER-Y2C" style="IBUITableViewCellStyleValue1" id="kXg-Uv-rgH">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="templates" textLabel="u21-Ef-oA3" detailTextLabel="hUZ-ER-Y2C" style="IBUITableViewCellStyleValue1" id="kXg-Uv-rgH">
                                         <rect key="frame" x="0.0" y="10" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -228,7 +231,7 @@ Copyright © 2012 Tragile-Eden.</mutableString>
                                             <segue destination="cby-cl-jRm" kind="push" identifier="templates" id="RKU-ah-NCy"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nouns" textLabel="pXn-Wv-Nlb" detailTextLabel="PIr-Ml-zku" style="IBUITableViewCellStyleValue1" id="RVT-04-e52">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nouns" textLabel="pXn-Wv-Nlb" detailTextLabel="PIr-Ml-zku" style="IBUITableViewCellStyleValue1" id="RVT-04-e52">
                                         <rect key="frame" x="0.0" y="55" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -256,7 +259,7 @@ Copyright © 2012 Tragile-Eden.</mutableString>
                                             <segue destination="cby-cl-jRm" kind="push" identifier="nouns" id="eZV-Ek-m7k"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="qualifications" textLabel="4IP-hY-HnP" detailTextLabel="e7V-pf-J6E" style="IBUITableViewCellStyleValue1" id="6ak-gD-DqS">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="qualifications" textLabel="4IP-hY-HnP" detailTextLabel="e7V-pf-J6E" style="IBUITableViewCellStyleValue1" id="6ak-gD-DqS">
                                         <rect key="frame" x="0.0" y="99" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -298,6 +301,54 @@ Copyright © 2012 Tragile-Eden.</mutableString>
             </objects>
             <point key="canvasLocation" x="1309" y="180"/>
         </scene>
+        <!--Dictionary Add View Controller-->
+        <scene sceneID="EgI-nF-avz">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUh-Tm-jFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="0Tq-oM-Ahm" customClass="DictionaryAddViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tVR-wK-FFp">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="UZj-aC-6Lq">
+                                <rect key="frame" x="20" y="63" width="280" height="120"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wnj-u6-tNh">
+                                <rect key="frame" x="20" y="191" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="登録">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="add" destination="0Tq-oM-Ahm" eventType="touchDown" id="d9U-Dm-eDh"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="テキスト生成時、「*」は形容詞+名詞に、「#」は数字に置き換えられます。" id="fgs-MF-GTm">
+                                <rect key="frame" x="20" y="8" width="287" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lJm-N8-t5j"/>
+                    <connections>
+                        <outlet property="textView" destination="UZj-aC-6Lq" id="dLp-gI-c68"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2204" y="180"/>
+        </scene>
         <!--Dictionary Detail View Controller-->
         <scene sceneID="lkN-1m-Gme">
             <objects>
@@ -319,15 +370,10 @@ Copyright © 2012 Tragile-Eden.</mutableString>
                                 <rect key="frame" x="0.0" y="323" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="削除" id="G7t-Cj-y8M">
-                                        <connections>
-                                            <action selector="remove" destination="cby-cl-jRm" id="whn-8i-Ou8"/>
-                                        </connections>
-                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="uPQ-Ym-zE4"/>
                                     <barButtonItem title="追加" id="U3q-C5-xNe">
                                         <connections>
-                                            <action selector="add" destination="cby-cl-jRm" id="XJj-C6-dfm"/>
+                                            <segue destination="0Tq-oM-Ahm" kind="push" id="89a-kn-o3u"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -335,14 +381,9 @@ Copyright © 2012 Tragile-Eden.</mutableString>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2Y4-Dp-bix">
-                        <barButtonItem key="rightBarButtonItem" title="編集" id="LqC-Mk-W5e">
-                            <connections>
-                                <action selector="edit" destination="cby-cl-jRm" id="4sa-37-Inp"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="2Y4-Dp-bix"/>
                     <connections>
+                        <outlet property="addButton" destination="U3q-C5-xNe" id="lIv-pg-Ogb"/>
                         <outlet property="table" destination="OWl-3f-bCo" id="DVW-zf-Jlm"/>
                     </connections>
                 </viewController>
@@ -378,7 +419,7 @@ Copyright © 2012 Tragile-Eden.</mutableString>
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZZr-O0-A7D">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZZr-O0-A7D">
                                 <rect key="frame" x="0.0" y="44" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -456,12 +497,17 @@ Copyright © 2012 Tragile-Eden.</mutableString>
         <class className="BackgroundView" superclassName="UIImageView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BackgroundView.h"/>
         </class>
+        <class className="DictionaryAddViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DictionaryAddViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="add"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
         <class className="DictionaryDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DictionaryDetailViewController.h"/>
             <relationships>
-                <relationship kind="action" name="add"/>
-                <relationship kind="action" name="edit"/>
-                <relationship kind="action" name="remove"/>
+                <relationship kind="outlet" name="addButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="table" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="type" candidateClass="NSNumber"/>
             </relationships>

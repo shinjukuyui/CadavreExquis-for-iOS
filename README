@@ -7,6 +7,13 @@ Porting to iOS: shinjukuyui.
 License under Apache License 2.0.
 see License.
 
-Icon images for tabs (CadavreExquis4iOS/images/*_24.png) uses TWG Ratina Icons.
+This project uses FBNetworkReachability.
+ by Hiroshi Hashiguchi.
+ Licensed under the MIT License.
+ (Modified for ARC)
+ see License-FBNetworkReachability
+
+Icon images for tabs (CadavreExquis4iOS/images/*_24.png, *_24@2x.png) uses TWG Ratina Icons.
 by The Working Group.
 Licensed under the Creative Commons Attribution Share-Alike 3.0.
+see License-IconsOnTabs
