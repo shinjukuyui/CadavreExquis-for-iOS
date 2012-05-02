@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA094B9B1550DDF30088FF8C /* DictionaryRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA094B9A1550DDF30088FF8C /* DictionaryRootViewController.m */; };
+		BA094B9F1550E36C0088FF8C /* DictionaryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA094B9E1550E36C0088FF8C /* DictionaryDetailViewController.m */; };
 		BA2C9C72154FB4AD004D45C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C9C71154FB4AD004D45C3 /* UIKit.framework */; };
 		BA2C9C74154FB4AD004D45C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C9C73154FB4AD004D45C3 /* Foundation.framework */; };
 		BA2C9C76154FB4AD004D45C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C9C75154FB4AD004D45C3 /* CoreGraphics.framework */; };
@@ -57,6 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA094B991550DDF30088FF8C /* DictionaryRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryRootViewController.h; sourceTree = "<group>"; };
+		BA094B9A1550DDF30088FF8C /* DictionaryRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryRootViewController.m; sourceTree = "<group>"; };
+		BA094B9D1550E36C0088FF8C /* DictionaryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryDetailViewController.h; sourceTree = "<group>"; };
+		BA094B9E1550E36C0088FF8C /* DictionaryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryDetailViewController.m; sourceTree = "<group>"; };
 		BA2C9C6D154FB4AD004D45C3 /* CadavreExquis4iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CadavreExquis4iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2C9C71154FB4AD004D45C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BA2C9C73154FB4AD004D45C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -264,6 +270,10 @@
 			children = (
 				BA2C9CB5154FBBA7004D45C3 /* DictionaryViewController.h */,
 				BA2C9CB6154FBBA7004D45C3 /* DictionaryViewController.m */,
+				BA094B991550DDF30088FF8C /* DictionaryRootViewController.h */,
+				BA094B9A1550DDF30088FF8C /* DictionaryRootViewController.m */,
+				BA094B9D1550E36C0088FF8C /* DictionaryDetailViewController.h */,
+				BA094B9E1550E36C0088FF8C /* DictionaryDetailViewController.m */,
 			);
 			name = DictionaryView;
 			sourceTree = "<group>";
@@ -438,6 +448,8 @@
 				BA2C9CE5154FBFDE004D45C3 /* History.m in Sources */,
 				BA2C9CE8154FBFF8004D45C3 /* TextView.m in Sources */,
 				BADB218C15502053005770C5 /* PaddingedLabel.m in Sources */,
+				BA094B9B1550DDF30088FF8C /* DictionaryRootViewController.m in Sources */,
+				BA094B9F1550E36C0088FF8C /* DictionaryDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

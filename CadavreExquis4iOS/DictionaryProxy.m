@@ -77,10 +77,7 @@ static dispatch_queue_t serialQueue;
 	model = [NSManagedObjectModel mergedModelFromBundles:nil]; 
     return model;
 }
-- (NSPersistentStoreCoordinator*) coordinator {
-    if (coordinator != nil) {
-        return coordinator;
-    }
+- (void) initializeData {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSArray* paths = paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     if ([paths count] > 0) {
@@ -93,6 +90,12 @@ static dispatch_queue_t serialQueue;
             }
         }
     }
+}
+- (NSPersistentStoreCoordinator*) coordinator {
+    if (coordinator != nil) {
+        return coordinator;
+    }
+    [self initializeData];
     NSURL* storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CadavreExquis.sqlite"];
 	NSLog(@"%@",[storeURL absoluteURL]);
     NSError *error = nil;

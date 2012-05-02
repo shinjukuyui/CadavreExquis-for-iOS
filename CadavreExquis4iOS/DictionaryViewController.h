@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DictionaryViewController : UINavigationController
+@interface DictionaryViewController : UINavigationController {
+}
 
 @end
