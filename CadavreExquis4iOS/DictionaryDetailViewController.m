@@ -2,8 +2,7 @@
 //  DictionaryDetailViewController.m
 //  CadavreExquis4iOS
 //
-//  Created by 花木 香織 on 12/05/02.
-//  Copyright (c) 2012年 Puella-Ex-Machina. All rights reserved.
+//  Copyright (c) 2012 Tragile-Eden. All rights reserved.
 //
 
 #import "DictionaryDetailViewController.h"
@@ -15,6 +14,7 @@
 
 @implementation DictionaryDetailViewController
 @synthesize table;
+@synthesize type;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +29,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    proxy = [DictionaryProxy sharedInstance];
 }
 
 - (void)viewDidUnload
@@ -37,6 +38,17 @@
     // Release any retained subviews of the main view.
 }
 - (void)viewWillAppear:(BOOL)animated{
+    switch ([type intValue]) {
+        case 0:
+            self.title = @"テンプレート登録";
+            break;
+        case 1:
+            self.title = @"名詞登録";
+            break;
+        default:
+            self.title = @"形容詞登録";
+            break;
+    }
     [table reloadData];
 }
 
@@ -48,7 +60,7 @@
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [proxy counts:@"Dictionary" withType:0];
+    return [proxy counts:@"Dictionary" withType:[type intValue]];
 }
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
@@ -56,8 +68,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     NSUInteger row = [indexPath row];
-    Dictionary* dictionary = (Dictionary*)[proxy selectAt:@"Dictionary" withType:0 ascending:NO indexOf:row];
+    Dictionary* dictionary = (Dictionary*)[proxy selectAt:@"Dictionary" withType:[type intValue] ascending:NO indexOf:row];
     cell.textLabel.numberOfLines = 0;
+    cell.textLabel.font = [UIFont systemFontOfSize:[UIFont systemFontSize] - 1];
     cell.textLabel.text = dictionary.sentence;
     return cell;
 }	 
@@ -65,6 +78,9 @@
     // TODO
 }
 - (IBAction) add {
+    // TODO
+}
+- (IBAction) remove {
     // TODO
 }
 @end

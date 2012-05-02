@@ -2,11 +2,11 @@
 //  DictionaryRootViewController.m
 //  CadavreExquis4iOS
 //
-//  Created by 花木 香織 on 12/05/02.
-//  Copyright (c) 2012年 Puella-Ex-Machina. All rights reserved.
+//  Copyright (c) 2012 Tragile-Eden. All rights reserved.
 //
 
 #import "DictionaryRootViewController.h"
+#import "DictionaryDetailViewController.h"
 
 @interface DictionaryRootViewController ()
 
@@ -48,11 +48,22 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DictionaryDetailViewController *controller = (DictionaryDetailViewController*)[segue destinationViewController];
+    if ([[segue identifier] isEqualToString:@"templates"]) {
+        [controller setType:[NSNumber numberWithInt:0]];
+    } else if ([[segue identifier] isEqualToString:@"nouns"]) {
+        [controller setType:[NSNumber numberWithInt:1]];
+    } else {
+        [controller setType:[NSNumber numberWithInt:2]];
+    }
+}
 -(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0:
             break;
         case 1:
+            // TODO 初期化の仕方：既にデータがロードされている状態でstoreを削除してファイルを元に戻そうとしたらうまくいかなかった
             [proxy initializeData];
             break;
     }

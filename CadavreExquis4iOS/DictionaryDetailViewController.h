@@ -2,8 +2,7 @@
 //  DictionaryDetailViewController.h
 //  CadavreExquis4iOS
 //
-//  Created by 花木 香織 on 12/05/02.
-//  Copyright (c) 2012年 Puella-Ex-Machina. All rights reserved.
+//  Copyright (c) 2012 Tragile-Eden. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,8 +11,11 @@
 @interface DictionaryDetailViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
     DictionaryProxy* proxy;
     UITableView* table;
+    NSNumber* type;
 }
 @property(strong, nonatomic) IBOutlet UITableView* table;
+@property(strong, nonatomic) IBOutlet NSNumber* type;
 - (IBAction) edit;
 - (IBAction) add;
+- (IBAction) remove;
 @end

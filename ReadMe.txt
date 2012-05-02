@@ -6,7 +6,11 @@ HyperCardスタック「優美なる死体 v2.1」のiOS版ソースコード。
 
 このソースコードにはApache License 2.0が適用されます。
 
+タブアイコンにはThe Working GroupのTWG Ratina Iconsを使用しました。
+タブアイコン（CadavreExquis4iOS/images/*_24.png）にはCreative Commons Attribute Share Alike 3.0が適用されます。
+
 バージョン履歴
+- v0.0.5 タブアイコンを追加、辞書の内容表示に対応
 - v0.0.4 画面遷移をタブビューに変更
 - v0.0.3 メモリ管理をARCに変更、辞書データ管理をCoreDataに変更
 - v0.0.2 iOS 5に対応（iOS4はサポート終了）
