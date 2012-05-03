@@ -17,6 +17,7 @@
 //  limitations under the License.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "DictionaryAddViewController.h"
 #import "Dictionary.h"
 
@@ -26,6 +27,7 @@
 
 @implementation DictionaryAddViewController
 @synthesize textView;
+@synthesize label;
 @synthesize type;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,6 +44,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     proxy = [DictionaryProxy sharedInstance];
+    textView.layer.borderWidth = 1;
+    textView.layer.borderColor = [[UIColor grayColor] CGColor];
+    textView.layer.cornerRadius = 10;
+    textView.clipsToBounds = YES;
+    [textView setDelegate:self];
 }
 
 - (void)viewDidUnload
@@ -67,15 +74,45 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+- (BOOL)textView:(UITextView*)view shouldChangeTextInRange:(NSRange)range replacementText:(NSString*)text {
+    if (view.text.length + text.length > 60) {
+        [label setText:@"0"];
+        return NO;
+    }
+    int remain = 60 - (view.text.length + text.length);
+    [label setText:[[NSNumber numberWithInt:remain] stringValue]];
+    return YES;
+}
+-(NSString*) removeSuffix:(NSString*)sentence suffix:(NSString*)suffix {
+    if ([sentence hasSuffix:suffix]) {
+        NSRange range = [sentence rangeOfString:suffix options:NSBackwardsSearch];
+        sentence = [sentence stringByReplacingOccurrencesOfString:sentence withString:suffix options:0 range:range];
+    }
+    return sentence;
+}
+-(NSString*) checkSentence:(NSString*)sentence {
+    sentence = [sentence stringByReplacingOccurrencesOfString:@"＊" withString:@"*"];
+    sentence = [sentence stringByReplacingOccurrencesOfString:@"＃" withString:@"#"];
+    sentence = [self removeSuffix:sentence suffix:@"、"];
+    sentence = [self removeSuffix:sentence suffix:@"。"];
+    sentence = [self removeSuffix:sentence suffix:@"，"];
+    sentence = [self removeSuffix:sentence suffix:@"．"];
+    sentence = [self removeSuffix:sentence suffix:@"？"];
+    sentence = [self removeSuffix:sentence suffix:@"！"];
+    sentence = [self removeSuffix:sentence suffix:@","];
+    sentence = [self removeSuffix:sentence suffix:@"."];
+    sentence = [self removeSuffix:sentence suffix:@"?"];
+    sentence = [self removeSuffix:sentence suffix:@"!"];
+    return sentence;
+}
 -(IBAction)add {
     if ([textView.text length] > 0) {
-        // TODO 入力されたテキストのチェック：末尾の句読点を削除、全角の＊と＃は半角に変換
         Dictionary* last = (Dictionary*)[proxy select:@"Dictionary" withType:-1 isRandom:NO withLimit:1 ascending:NO];
         Dictionary* entry = (Dictionary*)[proxy newEntity:@"Dictionary"];
         [entry setId:[NSNumber numberWithInt:[last.id intValue] + 1]];
         [entry setInitial:[NSNumber numberWithBool:YES]];
         [entry setInUse:[NSNumber numberWithBool:YES]];
-        [entry setSentence:textView.text];
+        [entry setSentence:[self checkSentence:textView.text]];
         [entry setType:self.type];
         [proxy save];
         [textView setText:@""];

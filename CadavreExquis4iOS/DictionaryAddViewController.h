@@ -20,12 +20,14 @@
 #import <UIKit/UIKit.h>
 #import "DictionaryProxy.h"
 
-@interface DictionaryAddViewController : UIViewController {
+@interface DictionaryAddViewController : UIViewController<UITextViewDelegate> {
     DictionaryProxy* proxy;
     UITextView* textView;
+    UILabel* label;
     NSNumber* type;
 }
 @property (nonatomic, strong) IBOutlet UITextView* textView;
+@property (nonatomic, strong) IBOutlet UILabel* label;
 @property(strong, nonatomic) IBOutlet NSNumber* type;
 - (IBAction)add;
 @end

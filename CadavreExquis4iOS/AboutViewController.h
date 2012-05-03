@@ -20,8 +20,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AboutViewController : UIViewController {
-    UILabel* label;    
+    UITextView* textView;
 }
-@property (nonatomic, strong) IBOutlet UILabel* label;
+@property (nonatomic, strong) IBOutlet UITextView* textView;
 - (IBAction)help;
 @end

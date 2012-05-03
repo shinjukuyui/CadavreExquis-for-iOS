@@ -48,7 +48,8 @@
 	// Do any additional setup after loading the view.
     [textView setEditable:NO];
     textView.layer.borderWidth = 1;
-    textView.layer.cornerRadius = 7;
+    textView.layer.borderColor = [[UIColor grayColor] CGColor];
+    textView.layer.cornerRadius = 10;
     textView.clipsToBounds = YES;
 }
 

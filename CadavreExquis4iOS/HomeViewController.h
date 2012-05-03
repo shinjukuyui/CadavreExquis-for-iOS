@@ -21,7 +21,6 @@
 #import <CoreData/CoreData.h>
 #import "DictionaryProxy.h"
 #import "BackgroundView.h"
-#import "HistoryView.h"
 
 @interface HomeViewController : UIViewController {
     NSString* sentence;

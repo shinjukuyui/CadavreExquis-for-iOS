@@ -26,7 +26,7 @@
 @end
 
 @implementation AboutViewController
-@synthesize label;
+@synthesize textView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,9 +41,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    label.layer.borderWidth = 1;
-    label.layer.cornerRadius = 7;
-    label.clipsToBounds = YES;
+    textView.layer.borderWidth = 1;
+    textView.layer.borderColor = [[UIColor grayColor] CGColor];
 }
 
 - (void)viewDidUnload
