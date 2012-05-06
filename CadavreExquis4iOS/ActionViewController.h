@@ -22,9 +22,6 @@
 #import <MessageUI/MFMailComposeViewController.h>
 
 @interface ActionViewController : UIViewController<UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
-    UITextView* textView;
-    UIButton* mailButton;
-    UIButton* tweetButton;
     NSArray* twitterAccounts;
     UIActionSheet* accountSelector;
 }

@@ -22,12 +22,11 @@
 
 @interface DictionaryAddViewController : UIViewController<UITextViewDelegate> {
     DictionaryProxy* proxy;
-    UITextView* textView;
-    UILabel* label;
-    NSNumber* type;
+    int maxLength;
 }
 @property (nonatomic, strong) IBOutlet UITextView* textView;
 @property (nonatomic, strong) IBOutlet UILabel* label;
+@property (nonatomic, strong) IBOutlet UIView* messageView;
 @property(strong, nonatomic) IBOutlet NSNumber* type;
 - (IBAction)add;
 @end

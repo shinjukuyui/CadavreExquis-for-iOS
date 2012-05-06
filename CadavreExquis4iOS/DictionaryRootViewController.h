@@ -22,9 +22,6 @@
 
 @interface DictionaryRootViewController : UITableViewController {
     DictionaryProxy* proxy;
-    UILabel* templates;
-    UILabel* nouns;
-    UILabel* qualifications;
 }
 @property(strong, nonatomic) IBOutlet UILabel* templates;
 @property(strong, nonatomic) IBOutlet UILabel* nouns;

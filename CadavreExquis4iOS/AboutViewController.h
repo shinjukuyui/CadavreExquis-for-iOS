@@ -20,7 +20,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AboutViewController : UIViewController {
-    UITextView* textView;
 }
 @property (nonatomic, strong) IBOutlet UITextView* textView;
 - (IBAction)help;

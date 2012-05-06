@@ -28,6 +28,7 @@
 @implementation DictionaryAddViewController
 @synthesize textView;
 @synthesize label;
+@synthesize messageView;
 @synthesize type;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -49,6 +50,8 @@
     textView.layer.cornerRadius = 10;
     textView.clipsToBounds = YES;
     [textView setDelegate:self];
+    [textView setReturnKeyType:UIReturnKeyDone];
+    [messageView setHidden:YES];
 }
 
 - (void)viewDidUnload
@@ -60,14 +63,18 @@
     switch ([type intValue]) {
         case 0:
             self.title = @"テンプレート登録";
+            maxLength = 60;
             break;
         case 1:
             self.title = @"名詞登録";
+            maxLength = 20;
             break;
         default:
             self.title = @"形容詞登録";
+            maxLength = 20;
             break;
     }
+    [label setText:[[NSNumber numberWithInt:maxLength] stringValue]];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -75,11 +82,15 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 - (BOOL)textView:(UITextView*)view shouldChangeTextInRange:(NSRange)range replacementText:(NSString*)text {
-    if (view.text.length + text.length > 60) {
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    if (view.text.length + text.length - range.length > maxLength) {
         [label setText:@"0"];
         return NO;
     }
-    int remain = 60 - (view.text.length + text.length);
+    int remain = maxLength - (view.text.length + text.length - range.length);
     [label setText:[[NSNumber numberWithInt:remain] stringValue]];
     return YES;
 }
@@ -116,6 +127,31 @@
         [entry setType:self.type];
         [proxy save];
         [textView setText:@""];
+        messageView.alpha = 0;
+        [messageView setHidden:NO];
+        [UIView animateWithDuration:0.5
+                              delay:0.1
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             messageView.alpha = 0.8;
+                         }
+                         completion:nil];
+        [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                         target:self
+                                       selector:@selector(dismissMessage:)
+                                       userInfo:nil
+                                        repeats:NO];
     }
+}
+-(void) dismissMessage:(NSTimer*) timer {
+    [timer invalidate];
+    [UIView animateWithDuration:0.5
+                          delay:0.1
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         messageView.alpha = 0.0;
+                         [messageView setHidden:YES];
+                     }
+                     completion:nil];
 }
 @end

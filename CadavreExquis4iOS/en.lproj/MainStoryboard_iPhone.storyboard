@@ -89,7 +89,7 @@ Copyright © 1994 Akiyoshi Sumi, All Rights Reserved.
 
 アプリケーションアイコン及び背景画像
  「メデューサの頭部 Haupt der Madusa」（部分）
-1617-1618 Peter Paul Rubens, Public domain.
+1618 Peter Paul Rubens, Public domain.
 
 タブアイコン
 TWG Ratina Icons
@@ -319,27 +319,12 @@ Copyright © 2012 Tragile-Eden.</mutableString>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="UZj-aC-6Lq">
-                                <rect key="frame" x="20" y="67" width="280" height="120"/>
+                                <rect key="frame" x="20" y="72" width="280" height="120"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wnj-u6-tNh">
-                                <rect key="frame" x="20" y="195" width="280" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="登録">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="add" destination="0Tq-oM-Ahm" eventType="touchDown" id="d9U-Dm-eDh"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="テキスト生成時、「*」は形容詞+名詞に、「#」は数字に置き換えられます。" id="fgs-MF-GTm">
                                 <rect key="frame" x="20" y="8" width="287" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -347,18 +332,39 @@ Copyright © 2012 Tragile-Eden.</mutableString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="60" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ibc-dh-UBO">
-                                <rect key="frame" x="258" y="47" width="42" height="21"/>
+                                <rect key="frame" x="258" y="52" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" id="1YS-26-b0Q">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="登録しました" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="pNr-Pv-fma">
+                                        <rect key="frame" x="120" y="6" width="81" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lJm-N8-t5j"/>
+                    <navigationItem key="navigationItem" id="lJm-N8-t5j">
+                        <barButtonItem key="rightBarButtonItem" title="登録" id="nJ0-Ql-Or8">
+                            <connections>
+                                <action selector="add" destination="0Tq-oM-Ahm" id="KHR-ca-LDU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="label" destination="ibc-dh-UBO" id="XlO-qT-OK7"/>
+                        <outlet property="messageView" destination="1YS-26-b0Q" id="f5b-ZW-Wu6"/>
                         <outlet property="textView" destination="UZj-aC-6Lq" id="dLp-gI-c68"/>
                     </connections>
                 </viewController>
@@ -518,6 +524,7 @@ Copyright © 2012 Tragile-Eden.</mutableString>
             <relationships>
                 <relationship kind="action" name="add"/>
                 <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="messageView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="type" candidateClass="NSNumber"/>
             </relationships>

@@ -22,7 +22,6 @@
 
 @interface HistoryViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
     DictionaryProxy* proxy;
-    UITableView* historyTable;
 }
 @property(strong, nonatomic) IBOutlet UITableView* historyTable;
 
