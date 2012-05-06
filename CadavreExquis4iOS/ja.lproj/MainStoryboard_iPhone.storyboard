@@ -83,7 +83,7 @@
                                         <rect key="frame" x="20" y="40" width="280" height="267"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <mutableString key="text">オリジナル
+                                        <string key="text">オリジナル
 HyperCardスタック「優美なる死体 Ver 2.1」
 Copyright © 1994 Akiyoshi Sumi, All Rights Reserved.
 
@@ -99,7 +99,7 @@ FBNetworkReachability
 Copyright © 2011 Hiroshi Hashiguchi. MIT License.
 
 iOS版製作
-Copyright © 2012 Tragile-Eden.</mutableString>
+Copyright © 2012 Tragile-Eden.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -380,26 +380,26 @@ Copyright © 2012 Tragile-Eden.</mutableString>
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OWl-3f-bCo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OWl-3f-bCo">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="323"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="modify" textLabel="mSN-DZ-K11" detailTextLabel="cg7-iv-3ZZ" style="IBUITableViewCellStyleValue1" id="hLG-id-tAP">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="modify" textLabel="Dus-BP-ia3" detailTextLabel="XQZ-UW-V2k" style="IBUITableViewCellStyleValue1" id="r3j-aX-9LI">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mSN-DZ-K11">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dus-BP-ia3">
                                                     <rect key="frame" x="10" y="11" width="35" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cg7-iv-3ZZ">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XQZ-UW-V2k">
                                                     <rect key="frame" x="246" y="11" width="44" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -410,13 +410,13 @@ Copyright © 2012 Tragile-Eden.</mutableString>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="0Tq-oM-Ahm" kind="push" identifier="modify" id="lbc-2s-VN8"/>
+                                            <segue destination="0Tq-oM-Ahm" kind="push" identifier="modify" id="cnm-M0-cf9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="cby-cl-jRm" id="26a-Zv-JQB"/>
-                                    <outlet property="delegate" destination="cby-cl-jRm" id="8h5-cx-poL"/>
+                                    <outlet property="delegate" destination="cby-cl-jRm" id="OAO-6K-wym"/>
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7hu-A3-Fyt">
@@ -426,7 +426,7 @@ Copyright © 2012 Tragile-Eden.</mutableString>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="uPQ-Ym-zE4"/>
                                     <barButtonItem title="追加" id="U3q-C5-xNe">
                                         <connections>
-                                            <segue destination="0Tq-oM-Ahm" kind="push" identifier="add" id="89a-kn-o3u"/>
+                                            <segue destination="0Tq-oM-Ahm" kind="push" id="89a-kn-o3u"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -529,6 +529,77 @@ Copyright © 2012 Tragile-Eden.</mutableString>
         <image name="outbox_24.png" width="24" height="24"/>
         <image name="plus_24.png" width="24" height="24"/>
     </resources>
+    <classes>
+        <class className="AboutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="help"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="ActionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="mail"/>
+                <relationship kind="action" name="tweet"/>
+                <relationship kind="outlet" name="mailButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="tweetButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="BackgroundView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BackgroundView.h"/>
+        </class>
+        <class className="DictionaryAddViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DictionaryAddViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="add"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="messageView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="selectedId" candidateClass="NSString"/>
+                <relationship kind="outlet" name="selectedText" candidateClass="NSString"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="type" candidateClass="NSNumber"/>
+            </relationships>
+        </class>
+        <class className="DictionaryDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DictionaryDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="type" candidateClass="NSNumber"/>
+            </relationships>
+        </class>
+        <class className="DictionaryRootViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DictionaryRootViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="initialize"/>
+                <relationship kind="outlet" name="nouns" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="qualifications" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="templates" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DictionaryViewController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DictionaryViewController.h"/>
+        </class>
+        <class className="HistoryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HistoryViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="historyTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="HomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="create"/>
+                <relationship kind="outlet" name="backgroundView" candidateClass="BackgroundView"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="TextView" superclassName="UITextView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TextView.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -536,6 +607,6 @@ Copyright © 2012 Tragile-Eden.</mutableString>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="RKU-ah-NCy"/>
-        <segue reference="lbc-2s-VN8"/>
+        <segue reference="cnm-M0-cf9"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -139,6 +139,10 @@
 		BAB78C6E1551DA5300940972 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BADB218A15502053005770C5 /* PaddingedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaddingedLabel.h; sourceTree = "<group>"; };
 		BADB218B15502053005770C5 /* PaddingedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaddingedLabel.m; sourceTree = "<group>"; };
+		BAE2529815565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = /Users/yui/Documents/dev/cocoaProjects/CadavreExquis4iOS/CadavreExquis4iOSTests/ja.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
+		BAE2529915565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = /Users/yui/Documents/dev/cocoaProjects/CadavreExquis4iOS/CadavreExquis4iOS/ja.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
+		BAE2529A15565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = /Users/yui/Documents/dev/cocoaProjects/CadavreExquis4iOS/CadavreExquis4iOS/ja.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<absolute>"; };
+		BAE2529B15565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = /Users/yui/Documents/dev/cocoaProjects/CadavreExquis4iOS/CadavreExquis4iOS/ja.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -533,6 +537,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BA2C9C7B154FB4AD004D45C3 /* en */,
+				BAE2529915565FA900E4EFE7 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -541,6 +546,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BA2C9C84154FB4AD004D45C3 /* en */,
+				BAE2529A15565FA900E4EFE7 /* ja */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -549,6 +555,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BA2C9C87154FB4AD004D45C3 /* en */,
+				BAE2529B15565FA900E4EFE7 /* ja */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
@@ -557,6 +564,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BA2C9CA7154FB4AD004D45C3 /* en */,
+				BAE2529815565FA900E4EFE7 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -679,7 +687,7 @@
 				BA2C9CAD154FB4AD004D45C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		BA2C9CAE154FB4AD004D45C3 /* Build configuration list for PBXNativeTarget "CadavreExquis4iOS" */ = {
 			isa = XCConfigurationList;
@@ -688,7 +696,7 @@
 				BA2C9CB0154FB4AD004D45C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		BA2C9CB1154FB4AD004D45C3 /* Build configuration list for PBXNativeTarget "CadavreExquis4iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -697,7 +705,7 @@
 				BA2C9CB3154FB4AD004D45C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

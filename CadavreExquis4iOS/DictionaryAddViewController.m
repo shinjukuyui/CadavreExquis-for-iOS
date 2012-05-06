@@ -30,6 +30,8 @@
 @synthesize label;
 @synthesize messageView;
 @synthesize type;
+@synthesize selectedId;
+@synthesize selectedText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -74,7 +76,8 @@
             maxLength = 20;
             break;
     }
-    [label setText:[[NSNumber numberWithInt:maxLength] stringValue]];
+    [textView setText:selectedText];
+    [label setText:[[NSNumber numberWithInt:(maxLength - [textView.text length])] stringValue]];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -118,13 +121,18 @@
 }
 -(IBAction)add {
     if ([textView.text length] > 0) {
-        Dictionary* last = (Dictionary*)[proxy select:@"Dictionary" withType:-1 isRandom:NO withLimit:1 ascending:NO];
-        Dictionary* entry = (Dictionary*)[proxy newEntity:@"Dictionary"];
-        [entry setId:[NSNumber numberWithInt:[last.id intValue] + 1]];
-        [entry setInitial:[NSNumber numberWithBool:YES]];
-        [entry setInUse:[NSNumber numberWithBool:YES]];
+        Dictionary* entry = nil;
+        if (selectedId != nil && [selectedId length] > 0) {
+            entry = (Dictionary*)[proxy selectById:@"Dictionary" byId:[selectedId intValue]];
+        } else {
+            Dictionary* last = (Dictionary*)[proxy select:@"Dictionary" withType:-1 isRandom:NO withLimit:1 ascending:NO];
+            entry = (Dictionary*)[proxy newEntity:@"Dictionary"];
+            [entry setId:[NSNumber numberWithInt:[last.id intValue] + 1]];
+            [entry setInitial:[NSNumber numberWithBool:YES]];
+            [entry setInUse:[NSNumber numberWithBool:YES]];
+            [entry setType:self.type];
+        }
         [entry setSentence:[self checkSentence:textView.text]];
-        [entry setType:self.type];
         [proxy save];
         [textView setText:@""];
         messageView.alpha = 0;

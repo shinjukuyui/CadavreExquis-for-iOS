@@ -44,6 +44,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     proxy = [DictionaryProxy sharedInstance];
+//    [table setDelegate:self];
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
@@ -69,6 +70,14 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     DictionaryAddViewController *controller = (DictionaryAddViewController*)[segue destinationViewController];
     [controller setType:self.type];
+    if ([[segue identifier] isEqualToString:@"modify"]) {
+        UITableViewCell* target = [table cellForRowAtIndexPath:[table indexPathForSelectedRow]];
+        [controller setSelectedText:target.textLabel.text];
+        [controller setSelectedId:target.detailTextLabel.text];
+    } else {
+        [controller setSelectedText:@""];
+        [controller setSelectedId:@""];
+    }
 }
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -81,9 +90,10 @@
     return [proxy counts:@"Dictionary" withType:[type intValue]];
 }
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {	
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"modify"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"modify"];
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     }
     NSUInteger row = [indexPath row];
     Dictionary* dictionary = (Dictionary*)[proxy selectAt:@"Dictionary" withType:[type intValue] ascending:NO indexOf:row];

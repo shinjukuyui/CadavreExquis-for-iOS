@@ -28,5 +28,7 @@
 @property (nonatomic, strong) IBOutlet UILabel* label;
 @property (nonatomic, strong) IBOutlet UIView* messageView;
 @property(strong, nonatomic) IBOutlet NSNumber* type;
+@property(strong, nonatomic) IBOutlet NSString* selectedId;
+@property(strong, nonatomic) IBOutlet NSString* selectedText;
 - (IBAction)add;
 @end
