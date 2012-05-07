@@ -61,12 +61,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     FBNetworkReachabilityConnectionMode mode = [FBNetworkReachability sharedInstance].connectionMode;
     if (mode == FBNetworkReachableNon) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"エラー"
-                                                        message:@"共有するにはネットワークに接続してください。"
-                                                       delegate:self
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:@"初期化",nil];
-        [alert show];
+        [self alert:@"エラー" withMessage:@"インターネットに接続されていません。"];
         [mailButton setHidden:YES];
         [tweetButton setHidden:YES];
     } else {
@@ -134,8 +129,8 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
                                                     message:message
                                                    delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:@"OK", nil];
     
     [alert show];
 }
@@ -164,7 +159,7 @@
     [request performRequestWithHandler:requestHandler];
 }
 - (void) actionSheet:(UIActionSheet*)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if ([twitterAccounts count] != buttonIndex) {
+    if ([twitterAccounts count] > buttonIndex) {
         [self tweetWithAccount:[twitterAccounts objectAtIndex:buttonIndex]];
     }
 }
@@ -176,7 +171,7 @@
             } else {
                 accountSelector = [[UIActionSheet alloc] init];
                 [accountSelector setDelegate:self];
-                accountSelector.title = @"アカウントを選択してください。";
+                accountSelector.title = @"アカウントを選択";
                 for (ACAccount* account in twitterAccounts) {
                     [accountSelector addButtonWithTitle:account.username];
                 }
