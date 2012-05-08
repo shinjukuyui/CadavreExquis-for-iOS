@@ -79,7 +79,7 @@
                                             <action selector="help" destination="egL-Vx-qbP" eventType="touchDown" id="aQi-Rq-xjG"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="FJE-Ae-RCr">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="FJE-Ae-RCr">
                                         <rect key="frame" x="20" y="40" width="280" height="267"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -88,8 +88,8 @@ HyperCard stack "Cadavre Exquis ver2.1"
 Copyright © 1994 Akiyoshi Sumi, All Rights Reserved.
 
 Application icon and background image
-Haupt der Madusa (part of)
-1618 Peter Paul Rubens, Public domain.
+Ophelia (part of)
+1852 John Everett Millais, Public domain (from Wikimedia Commons under the Terms Of Use)
 
 Tab icon images
 TWG Ratina Icons

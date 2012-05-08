@@ -79,27 +79,27 @@
                                             <action selector="help" destination="egL-Vx-qbP" eventType="touchDown" id="aQi-Rq-xjG"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="FJE-Ae-RCr">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="FJE-Ae-RCr">
                                         <rect key="frame" x="20" y="40" width="280" height="267"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <string key="text">オリジナル
+                                        <mutableString key="text">オリジナル
 HyperCardスタック「優美なる死体 Ver 2.1」
 Copyright © 1994 Akiyoshi Sumi, All Rights Reserved.
 
 アプリケーションアイコン及び背景画像
- 「メデューサの頭部 Haupt der Madusa」（部分）
-1618 Peter Paul Rubens, Public domain.
+ 「オフィーリア Ophelia」（部分）
+1852 John Everett Millais,  Public domain (from Wikimedia Commons under the Terms of Use).
 
 タブアイコン
 TWG Ratina Icons
-Copyright © 2010 The Working Gorup, Creative Commons BY-SA 3.0.
+Copyright © 2010 The Working Gorup, Creative Commons Attribution Share-Alike 3.0.
 
 FBNetworkReachability
 Copyright © 2011 Hiroshi Hashiguchi. MIT License.
 
 iOS版製作
-Copyright © 2012 Tragile-Eden.</string>
+Copyright © 2012 Tragile-Eden.</mutableString>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
