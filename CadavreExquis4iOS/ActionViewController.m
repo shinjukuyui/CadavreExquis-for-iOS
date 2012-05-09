@@ -51,6 +51,7 @@
     textView.layer.borderColor = [[UIColor grayColor] CGColor];
     textView.layer.cornerRadius = 10;
     textView.clipsToBounds = YES;
+    twitterAccounts = nil;
 }
 
 - (void)viewDidUnload
@@ -73,12 +74,14 @@
             }
             [textView setText:sentence];
             if ([MFMailComposeViewController canSendMail]) {
+                [mailButton setHidden:NO];
                 [mailButton setEnabled:YES];
             } else {
                 [mailButton setEnabled:NO];
                 [mailButton setHidden:YES];
             }
             if (twitterAccounts != nil && [twitterAccounts count] > 0) {
+                [tweetButton setHidden:NO];
                 [tweetButton setEnabled:YES];
             } else {
                 [tweetButton setEnabled:NO];
@@ -104,7 +107,14 @@
     [accountStore requestAccessToAccountsWithType:accountType withCompletionHandler:^(BOOL granted, NSError *error) {
          dispatch_async(dispatch_get_main_queue(), ^{
              if (granted) {
-                 twitterAccounts = [accountStore accountsWithAccountType:accountType];
+                 twitterAccounts = [[NSMutableArray alloc] init];
+                 NSArray* accounts = [accountStore accountsWithAccountType:accountType];
+                 for (int i = 0; i < [accounts count]; i++) {
+                     ACAccount* account = (ACAccount*)[accounts objectAtIndex:i];
+                     [twitterAccounts addObject:[account identifier]];
+                 }
+                 [tweetButton setHidden:NO];
+                 [tweetButton setEnabled:YES];
              } else {
                  twitterAccounts = nil;
              }
@@ -142,14 +152,15 @@
     [mailer setMessageBody:sentence isHTML:NO];
     [self presentModalViewController:mailer animated:YES];
 }
-- (void) tweetWithAccount:(ACAccount*) account {
+- (void) tweetWithAccount:(NSString*) account {
     AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    NSDictionary *parameter = [NSDictionary dictionaryWithObject:[delegate.homeViewController getSentence] forKey:@"status"];
-    NSURL *turl = [NSURL URLWithString:@"https://api.twitter.com/1/statuses/update.json"];
-    TWRequest *request = [[TWRequest alloc] initWithURL:turl parameters:parameter requestMethod:TWRequestMethodPOST];
-    request.account = account;
+    NSDictionary* parameter = [NSDictionary dictionaryWithObject:[delegate.homeViewController getSentence] forKey:@"status"];
+    NSURL* url = [NSURL URLWithString:@"https://api.twitter.com/1/statuses/update.json"];
+    TWRequest* request = [[TWRequest alloc] initWithURL:url parameters:parameter requestMethod:TWRequestMethodPOST];
+    ACAccountStore* accountStore = [[ACAccountStore alloc] init];
+    request.account = [accountStore accountWithIdentifier:account];
     // TODO インジケータ
-    TWRequestHandler requestHandler = ^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+    TWRequestHandler requestHandler = ^(NSData* responseData, NSHTTPURLResponse* urlResponse, NSError* error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             // TODO インジケータ隠す
             if (error != nil) {

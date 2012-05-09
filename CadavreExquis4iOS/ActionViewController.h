@@ -22,7 +22,7 @@
 #import <MessageUI/MFMailComposeViewController.h>
 
 @interface ActionViewController : UIViewController<UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
-    NSArray* twitterAccounts;
+    NSMutableArray* twitterAccounts;
     UIActionSheet* accountSelector;
 }
 @property (nonatomic, strong) IBOutlet UITextView* textView;
