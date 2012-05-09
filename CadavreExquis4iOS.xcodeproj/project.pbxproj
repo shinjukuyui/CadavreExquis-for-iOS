@@ -139,10 +139,10 @@
 		BAB78C6E1551DA5300940972 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BADB218A15502053005770C5 /* PaddingedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaddingedLabel.h; sourceTree = "<group>"; };
 		BADB218B15502053005770C5 /* PaddingedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaddingedLabel.m; sourceTree = "<group>"; };
-		BAE2529815565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = /Users/yui/Documents/dev/cocoaProjects/CadavreExquis4iOS/CadavreExquis4iOSTests/ja.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
-		BAE2529915565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = /Users/yui/Documents/dev/cocoaProjects/CadavreExquis4iOS/CadavreExquis4iOS/ja.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
-		BAE2529A15565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = /Users/yui/Documents/dev/cocoaProjects/CadavreExquis4iOS/CadavreExquis4iOS/ja.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<absolute>"; };
-		BAE2529B15565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = /Users/yui/Documents/dev/cocoaProjects/CadavreExquis4iOS/CadavreExquis4iOS/ja.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<absolute>"; };
+		BAE2529815565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BAE2529915565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BAE2529A15565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		BAE2529B15565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
