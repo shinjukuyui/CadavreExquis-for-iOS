@@ -109,12 +109,14 @@
              if (granted) {
                  twitterAccounts = [[NSMutableArray alloc] init];
                  NSArray* accounts = [accountStore accountsWithAccountType:accountType];
-                 for (int i = 0; i < [accounts count]; i++) {
-                     ACAccount* account = (ACAccount*)[accounts objectAtIndex:i];
-                     [twitterAccounts addObject:[account identifier]];
+                 if (accounts != nil && [accounts count] > 0) {
+                     for (int i = 0; i < [accounts count]; i++) {
+                         ACAccount* account = (ACAccount*)[accounts objectAtIndex:i];
+                         [twitterAccounts addObject:[account identifier]];
+                     }
+                     [tweetButton setHidden:NO];
+                     [tweetButton setEnabled:YES];
                  }
-                 [tweetButton setHidden:NO];
-                 [tweetButton setEnabled:YES];
              } else {
                  twitterAccounts = nil;
              }
