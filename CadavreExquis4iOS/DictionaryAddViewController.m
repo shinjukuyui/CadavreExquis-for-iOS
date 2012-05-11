@@ -64,15 +64,15 @@
 - (void)viewWillAppear:(BOOL)animated{
     switch ([type intValue]) {
         case 0:
-            self.title = @"テンプレート登録";
+            self.title = NSLocalizedString(@"Templates", nil);
             maxLength = 60;
             break;
         case 1:
-            self.title = @"名詞登録";
+            self.title = NSLocalizedString(@"Nouns", nil);
             maxLength = 20;
             break;
         default:
-            self.title = @"形容詞登録";
+            self.title = NSLocalizedString(@"Qualifications", nil);
             maxLength = 20;
             break;
     }

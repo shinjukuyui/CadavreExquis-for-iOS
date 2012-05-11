@@ -56,13 +56,13 @@
 - (void)viewWillAppear:(BOOL)animated{
     switch ([type intValue]) {
         case 0:
-            self.title = @"テンプレート登録";
+            self.title = NSLocalizedString(@"Templates", nil);
             break;
         case 1:
-            self.title = @"名詞登録";
+            self.title = NSLocalizedString(@"Nouns", nil);
             break;
         default:
-            self.title = @"形容詞登録";
+            self.title = NSLocalizedString(@"Qualifications", nil);
             break;
     }
     [table reloadData];

@@ -38,7 +38,7 @@
     [textView setOpaque:YES];
     [textView setTextAlignment:UITextAlignmentCenter];
     [textView setTextColor:[UIColor grayColor]];
-    [textView setText:@"タップして開始"];
+    [textView setText:NSLocalizedString(@"TapToStart", nil)];
     textView.alpha = 0.8;
     [self adjust];
     AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
@@ -125,7 +125,7 @@
 - (NSString*) getSentence {
     if (sentence == nil
         || sentence.length == 0
-        || [sentence isEqualToString:@"タップして開始"]) {
+        || [sentence isEqualToString:NSLocalizedString(@"TapToStart", nil)]) {
         return @"";
     }
     return sentence;

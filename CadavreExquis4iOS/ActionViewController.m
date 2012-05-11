@@ -62,7 +62,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     FBNetworkReachabilityConnectionMode mode = [FBNetworkReachability sharedInstance].connectionMode;
     if (mode == FBNetworkReachableNon) {
-        [self alert:@"エラー" withMessage:@"インターネットに接続されていません。"];
+        [self alert:NSLocalizedString(@"Error", nil) withMessage:NSLocalizedString(@"NoConnection", nil)];
         [mailButton setHidden:YES];
         [tweetButton setHidden:YES];
     } else {
@@ -88,7 +88,7 @@
                 [tweetButton setHidden:YES];
             }
         } else {
-            [textView setText:@"テキストが生成されていません。"];
+            [textView setText:NSLocalizedString(@"NoText", nil)];
             [mailButton setEnabled:NO];
             [tweetButton setEnabled:NO];
             [mailButton setHidden:YES];
@@ -131,14 +131,17 @@
         case MFMailComposeResultCancelled:
         case MFMailComposeResultSaved:
         case MFMailComposeResultSent:
+            break;
         case MFMailComposeResultFailed:
+            [self alert:NSLocalizedString(@"Error", nil) withMessage:NSLocalizedString(@"MailError", nil)];
+            break;
         default:
             break;
     }
     [self dismissModalViewControllerAnimated:YES];
 }
 - (void) alert:(NSString*)title withMessage:(NSString*) message {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:title
                                                     message:message
                                                    delegate:self
                                           cancelButtonTitle:nil
@@ -147,16 +150,19 @@
     [alert show];
 }
 - (void) mail {
+    FBNetworkReachabilityConnectionMode mode = [FBNetworkReachability sharedInstance].connectionMode;
+    if (mode == FBNetworkReachableNon) {
+        [self alert:NSLocalizedString(@"Error", nil) withMessage:NSLocalizedString(@"NoConnection", nil)];
+        return;
+    }
     MFMailComposeViewController* mailer = [[MFMailComposeViewController alloc] init];
     [mailer setMailComposeDelegate:self];
-    AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    NSString* sentence = [delegate.homeViewController getSentence];
+    NSString* sentence = [textView text];
     [mailer setMessageBody:sentence isHTML:NO];
     [self presentModalViewController:mailer animated:YES];
 }
 - (void) tweetWithAccount:(NSString*) account {
-    AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    NSDictionary* parameter = [NSDictionary dictionaryWithObject:[delegate.homeViewController getSentence] forKey:@"status"];
+    NSDictionary* parameter = [NSDictionary dictionaryWithObject:[[textView text] stringByAppendingString:@" #優美なる死体"] forKey:@"status"];
     NSURL* url = [NSURL URLWithString:@"https://api.twitter.com/1/statuses/update.json"];
     TWRequest* request = [[TWRequest alloc] initWithURL:url parameters:parameter requestMethod:TWRequestMethodPOST];
     ACAccountStore* accountStore = [[ACAccountStore alloc] init];
@@ -166,6 +172,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             // TODO インジケータ隠す
             if (error != nil) {
+                [self alert:NSLocalizedString(@"Error", nil) withMessage:NSLocalizedString(@"TweetError", nil)];
             }
         });
     };
@@ -177,6 +184,16 @@
     }
 }
 - (void) tweet {
+    FBNetworkReachabilityConnectionMode mode = [FBNetworkReachability sharedInstance].connectionMode;
+    if (mode == FBNetworkReachableNon) {
+        [self alert:NSLocalizedString(@"Error", nil) withMessage:NSLocalizedString(@"NoConnection", nil)];
+        return;
+    }
+    NSString* string = [[textView text] stringByAppendingString:@" #優美なる死体"];
+    if ([string length] > 140) {
+        [self alert:NSLocalizedString(@"Error", nil) withMessage:NSLocalizedString(@"OverLetter", nil)];
+        return;
+    }
     if (twitterAccounts != nil && [twitterAccounts count] > 0) {
         if ([twitterAccounts count] > 1) {
             if (accountSelector != nil && [accountSelector isVisible]) {
@@ -184,11 +201,11 @@
             } else {
                 accountSelector = [[UIActionSheet alloc] init];
                 [accountSelector setDelegate:self];
-                accountSelector.title = @"アカウントを選択";
+                accountSelector.title = NSLocalizedString(@"SelectAccount", nil);
                 for (ACAccount* account in twitterAccounts) {
                     [accountSelector addButtonWithTitle:account.username];
                 }
-                [accountSelector addButtonWithTitle:@"キャンセル"];
+                [accountSelector addButtonWithTitle:NSLocalizedString(@"CancelButtonLabel", nil)];
                 [accountSelector setCancelButtonIndex:[twitterAccounts count]];
                 [accountSelector showInView:self.view];
             }

@@ -81,11 +81,11 @@
     }
 }
 - (IBAction)initialize {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"初期化"
-                                                    message:@"初期化すると登録済みのデータと履歴が全て失われます。よろしいですか。"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Initialize", nil)
+                                                    message:NSLocalizedString(@"InitializeMessage", nil)
                                                    delegate:self
-                                          cancelButtonTitle:@"キャンセル"
-                                          otherButtonTitles:@"初期化",nil];
+                                          cancelButtonTitle:NSLocalizedString(@"CancelButtonLabel", nil)
+                                          otherButtonTitles:NSLocalizedString(@"Initialize", nil),nil];
     [alert show];
 }
 

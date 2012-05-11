@@ -58,8 +58,8 @@
 - (IBAction)help {
     FBNetworkReachabilityConnectionMode mode = [FBNetworkReachability sharedInstance].connectionMode;
     if (mode == FBNetworkReachableNon) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"エラー"
-                                                        message:@"インターネットに接続されていません。"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil)
+                                                        message:NSLocalizedString(@"NoConnection", nil)
                                                        delegate:self
                                               cancelButtonTitle:nil
                                               otherButtonTitles:@"OK",nil];
