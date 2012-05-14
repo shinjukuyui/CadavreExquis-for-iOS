@@ -158,6 +158,7 @@
     MFMailComposeViewController* mailer = [[MFMailComposeViewController alloc] init];
     [mailer setMailComposeDelegate:self];
     NSString* sentence = [textView text];
+    [mailer setSubject:NSLocalizedString(@"CadavreExquis", nil)];
     [mailer setMessageBody:sentence isHTML:NO];
     [self presentModalViewController:mailer animated:YES];
 }
@@ -202,12 +203,14 @@
                 accountSelector = [[UIActionSheet alloc] init];
                 [accountSelector setDelegate:self];
                 accountSelector.title = NSLocalizedString(@"SelectAccount", nil);
-                for (ACAccount* account in twitterAccounts) {
+                ACAccountStore* accountStore = [[ACAccountStore alloc] init];
+                for (NSString* twitterAccount in twitterAccounts) {
+                    ACAccount* account = [accountStore accountWithIdentifier:twitterAccount];
                     [accountSelector addButtonWithTitle:account.username];
                 }
                 [accountSelector addButtonWithTitle:NSLocalizedString(@"CancelButtonLabel", nil)];
                 [accountSelector setCancelButtonIndex:[twitterAccounts count]];
-                [accountSelector showInView:self.view];
+                [accountSelector showInView:self.view.window];
             }
         } else {
             [self tweetWithAccount:[twitterAccounts objectAtIndex:0]];

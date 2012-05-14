@@ -16,7 +16,6 @@
 		BA2C9C7E154FB4AD004D45C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C9C7D154FB4AD004D45C3 /* main.m */; };
 		BA2C9C82154FB4AD004D45C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C9C81154FB4AD004D45C3 /* AppDelegate.m */; };
 		BA2C9C85154FB4AD004D45C3 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2C9C83154FB4AD004D45C3 /* MainStoryboard_iPhone.storyboard */; };
-		BA2C9C88154FB4AD004D45C3 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2C9C86154FB4AD004D45C3 /* MainStoryboard_iPad.storyboard */; };
 		BA2C9C8B154FB4AD004D45C3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C9C8A154FB4AD004D45C3 /* HomeViewController.m */; };
 		BA2C9C92154FB4AD004D45C3 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C9C91154FB4AD004D45C3 /* HistoryViewController.m */; };
 		BA2C9C9E154FB4AD004D45C3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C9C9D154FB4AD004D45C3 /* SenTestingKit.framework */; };
@@ -75,25 +74,24 @@
 		BA094B9A1550DDF30088FF8C /* DictionaryRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryRootViewController.m; sourceTree = "<group>"; };
 		BA094B9D1550E36C0088FF8C /* DictionaryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryDetailViewController.h; sourceTree = "<group>"; };
 		BA094B9E1550E36C0088FF8C /* DictionaryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryDetailViewController.m; sourceTree = "<group>"; };
-		BA2C9C6D154FB4AD004D45C3 /* CadavreExquis4iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CadavreExquis4iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA2C9C6D154FB4AD004D45C3 /* CadavreExquis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CadavreExquis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2C9C71154FB4AD004D45C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BA2C9C73154FB4AD004D45C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BA2C9C75154FB4AD004D45C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BA2C9C79154FB4AD004D45C3 /* CadavreExquis4iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CadavreExquis4iOS-Info.plist"; sourceTree = "<group>"; };
+		BA2C9C79154FB4AD004D45C3 /* CadavreExquis-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CadavreExquis-Info.plist"; sourceTree = "<group>"; };
 		BA2C9C7B154FB4AD004D45C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA2C9C7D154FB4AD004D45C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BA2C9C7F154FB4AD004D45C3 /* CadavreExquis4iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CadavreExquis4iOS-Prefix.pch"; sourceTree = "<group>"; };
+		BA2C9C7F154FB4AD004D45C3 /* CadavreExquis-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CadavreExquis-Prefix.pch"; sourceTree = "<group>"; };
 		BA2C9C80154FB4AD004D45C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BA2C9C81154FB4AD004D45C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BA2C9C84154FB4AD004D45C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		BA2C9C87154FB4AD004D45C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		BA2C9C89154FB4AD004D45C3 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		BA2C9C8A154FB4AD004D45C3 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		BA2C9C90154FB4AD004D45C3 /* HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		BA2C9C91154FB4AD004D45C3 /* HistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
-		BA2C9C9C154FB4AD004D45C3 /* CadavreExquis4iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CadavreExquis4iOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA2C9C9C154FB4AD004D45C3 /* CadavreExquisTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CadavreExquisTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2C9C9D154FB4AD004D45C3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		BA2C9CA5154FB4AD004D45C3 /* CadavreExquis4iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CadavreExquis4iOSTests-Info.plist"; sourceTree = "<group>"; };
+		BA2C9CA5154FB4AD004D45C3 /* CadavreExquisTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CadavreExquisTests-Info.plist"; sourceTree = "<group>"; };
 		BA2C9CA7154FB4AD004D45C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA2C9CA9154FB4AD004D45C3 /* CadavreExquis4iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CadavreExquis4iOSTests.h; sourceTree = "<group>"; };
 		BA2C9CAA154FB4AD004D45C3 /* CadavreExquis4iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CadavreExquis4iOSTests.m; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 		BAE2529815565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BAE2529915565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BAE2529A15565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		BAE2529B15565FA900E4EFE7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,8 +190,8 @@
 		BA2C9C6E154FB4AD004D45C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA2C9C6D154FB4AD004D45C3 /* CadavreExquis4iOS.app */,
-				BA2C9C9C154FB4AD004D45C3 /* CadavreExquis4iOSTests.octest */,
+				BA2C9C6D154FB4AD004D45C3 /* CadavreExquis.app */,
+				BA2C9C9C154FB4AD004D45C3 /* CadavreExquisTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,11 +235,11 @@
 		BA2C9C78154FB4AD004D45C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BA2C9C79154FB4AD004D45C3 /* CadavreExquis4iOS-Info.plist */,
+				BA2C9C79154FB4AD004D45C3 /* CadavreExquis-Info.plist */,
 				BA53D9A4155D706500FDF303 /* Localizable.strings */,
 				BA2C9C7A154FB4AD004D45C3 /* InfoPlist.strings */,
 				BA2C9C7D154FB4AD004D45C3 /* main.m */,
-				BA2C9C7F154FB4AD004D45C3 /* CadavreExquis4iOS-Prefix.pch */,
+				BA2C9C7F154FB4AD004D45C3 /* CadavreExquis-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -260,7 +257,7 @@
 		BA2C9CA4154FB4AD004D45C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BA2C9CA5154FB4AD004D45C3 /* CadavreExquis4iOSTests-Info.plist */,
+				BA2C9CA5154FB4AD004D45C3 /* CadavreExquisTests-Info.plist */,
 				BA2C9CA6154FB4AD004D45C3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -270,7 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				BA2C9C83154FB4AD004D45C3 /* MainStoryboard_iPhone.storyboard */,
-				BA2C9C86154FB4AD004D45C3 /* MainStoryboard_iPad.storyboard */,
 				BA2C9CCD154FBEBB004D45C3 /* Model.xcdatamodeld */,
 				BA2C9CCC154FBEBB004D45C3 /* initialData.sqlite */,
 				BA2C9CBE154FBE25004D45C3 /* ce4ios.jpg */,
@@ -377,9 +373,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BA2C9C6C154FB4AD004D45C3 /* CadavreExquis4iOS */ = {
+		BA2C9C6C154FB4AD004D45C3 /* CadavreExquis */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA2C9CAE154FB4AD004D45C3 /* Build configuration list for PBXNativeTarget "CadavreExquis4iOS" */;
+			buildConfigurationList = BA2C9CAE154FB4AD004D45C3 /* Build configuration list for PBXNativeTarget "CadavreExquis" */;
 			buildPhases = (
 				BA2C9C69154FB4AD004D45C3 /* Sources */,
 				BA2C9C6A154FB4AD004D45C3 /* Frameworks */,
@@ -389,14 +385,14 @@
 			);
 			dependencies = (
 			);
-			name = CadavreExquis4iOS;
+			name = CadavreExquis;
 			productName = CadavreExquis4iOS;
-			productReference = BA2C9C6D154FB4AD004D45C3 /* CadavreExquis4iOS.app */;
+			productReference = BA2C9C6D154FB4AD004D45C3 /* CadavreExquis.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BA2C9C9B154FB4AD004D45C3 /* CadavreExquis4iOSTests */ = {
+		BA2C9C9B154FB4AD004D45C3 /* CadavreExquisTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA2C9CB1154FB4AD004D45C3 /* Build configuration list for PBXNativeTarget "CadavreExquis4iOSTests" */;
+			buildConfigurationList = BA2C9CB1154FB4AD004D45C3 /* Build configuration list for PBXNativeTarget "CadavreExquisTests" */;
 			buildPhases = (
 				BA2C9C97154FB4AD004D45C3 /* Sources */,
 				BA2C9C98154FB4AD004D45C3 /* Frameworks */,
@@ -408,9 +404,9 @@
 			dependencies = (
 				BA2C9CA2154FB4AD004D45C3 /* PBXTargetDependency */,
 			);
-			name = CadavreExquis4iOSTests;
+			name = CadavreExquisTests;
 			productName = CadavreExquis4iOSTests;
-			productReference = BA2C9C9C154FB4AD004D45C3 /* CadavreExquis4iOSTests.octest */;
+			productReference = BA2C9C9C154FB4AD004D45C3 /* CadavreExquisTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -420,9 +416,9 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = "Puella-Ex-Machina";
+				ORGANIZATIONNAME = "tragile-eden";
 			};
-			buildConfigurationList = BA2C9C67154FB4AD004D45C3 /* Build configuration list for PBXProject "CadavreExquis4iOS" */;
+			buildConfigurationList = BA2C9C67154FB4AD004D45C3 /* Build configuration list for PBXProject "CadavreExquis" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -435,8 +431,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BA2C9C6C154FB4AD004D45C3 /* CadavreExquis4iOS */,
-				BA2C9C9B154FB4AD004D45C3 /* CadavreExquis4iOSTests */,
+				BA2C9C6C154FB4AD004D45C3 /* CadavreExquis */,
+				BA2C9C9B154FB4AD004D45C3 /* CadavreExquisTests */,
 			);
 		};
 /* End PBXProject section */
@@ -448,7 +444,6 @@
 			files = (
 				BA2C9C7C154FB4AD004D45C3 /* InfoPlist.strings in Resources */,
 				BA2C9C85154FB4AD004D45C3 /* MainStoryboard_iPhone.storyboard in Resources */,
-				BA2C9C88154FB4AD004D45C3 /* MainStoryboard_iPad.storyboard in Resources */,
 				BA2C9CC1154FBE25004D45C3 /* ce4ios.jpg in Resources */,
 				BA2C9CC5154FBE49004D45C3 /* icon.png in Resources */,
 				BA2C9CC7154FBE51004D45C3 /* iconRatina.png in Resources */,
@@ -533,7 +528,7 @@
 /* Begin PBXTargetDependency section */
 		BA2C9CA2154FB4AD004D45C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BA2C9C6C154FB4AD004D45C3 /* CadavreExquis4iOS */;
+			target = BA2C9C6C154FB4AD004D45C3 /* CadavreExquis */;
 			targetProxy = BA2C9CA1154FB4AD004D45C3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -555,15 +550,6 @@
 				BAE2529A15565FA900E4EFE7 /* ja */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		BA2C9C86154FB4AD004D45C3 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA2C9C87154FB4AD004D45C3 /* en */,
-				BAE2529B15565FA900E4EFE7 /* ja */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		BA2C9CA6154FB4AD004D45C3 /* InfoPlist.strings */ = {
@@ -638,9 +624,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CadavreExquis4iOS/CadavreExquis4iOS-Prefix.pch";
-				INFOPLIST_FILE = "CadavreExquis4iOS/CadavreExquis4iOS-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CadavreExquis4iOS/CadavreExquis-Prefix.pch";
+				INFOPLIST_FILE = "CadavreExquis4iOS/CadavreExquis-Info.plist";
+				PRODUCT_NAME = CadavreExquis;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -650,9 +636,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CadavreExquis4iOS/CadavreExquis4iOS-Prefix.pch";
-				INFOPLIST_FILE = "CadavreExquis4iOS/CadavreExquis4iOS-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CadavreExquis4iOS/CadavreExquis-Prefix.pch";
+				INFOPLIST_FILE = "CadavreExquis4iOS/CadavreExquis-Info.plist";
+				PRODUCT_NAME = CadavreExquis;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -668,8 +654,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CadavreExquis4iOS/CadavreExquis4iOS-Prefix.pch";
-				INFOPLIST_FILE = "CadavreExquis4iOSTests/CadavreExquis4iOSTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "CadavreExquis4iOSTests/CadavreExquisTests-Info.plist";
+				PRODUCT_NAME = CadavreExquisTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -685,8 +671,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CadavreExquis4iOS/CadavreExquis4iOS-Prefix.pch";
-				INFOPLIST_FILE = "CadavreExquis4iOSTests/CadavreExquis4iOSTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "CadavreExquis4iOSTests/CadavreExquisTests-Info.plist";
+				PRODUCT_NAME = CadavreExquisTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -695,7 +681,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BA2C9C67154FB4AD004D45C3 /* Build configuration list for PBXProject "CadavreExquis4iOS" */ = {
+		BA2C9C67154FB4AD004D45C3 /* Build configuration list for PBXProject "CadavreExquis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA2C9CAC154FB4AD004D45C3 /* Debug */,
@@ -704,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		BA2C9CAE154FB4AD004D45C3 /* Build configuration list for PBXNativeTarget "CadavreExquis4iOS" */ = {
+		BA2C9CAE154FB4AD004D45C3 /* Build configuration list for PBXNativeTarget "CadavreExquis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA2C9CAF154FB4AD004D45C3 /* Debug */,
@@ -713,7 +699,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		BA2C9CB1154FB4AD004D45C3 /* Build configuration list for PBXNativeTarget "CadavreExquis4iOSTests" */ = {
+		BA2C9CB1154FB4AD004D45C3 /* Build configuration list for PBXNativeTarget "CadavreExquisTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA2C9CB2154FB4AD004D45C3 /* Debug */,

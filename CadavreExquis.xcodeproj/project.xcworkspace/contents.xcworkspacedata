@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CadavreExquis4iOS.xcodeproj">
+      location = "self:CadavreExquis.xcodeproj">
    </FileRef>
 </Workspace>
