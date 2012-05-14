@@ -1,4 +1,5 @@
 //
+// Copyright (c) 2012 Tragile-Eden*. (modify for ARC)
 // Copyright (c) 2011 Five-technology Co.,Ltd.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
