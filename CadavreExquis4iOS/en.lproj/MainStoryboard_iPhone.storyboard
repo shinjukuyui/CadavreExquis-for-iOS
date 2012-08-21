@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
     </dependencies>
     <scenes>
         <!--Home View Controller - Home-->
@@ -82,7 +82,7 @@
                                         <rect key="frame" x="20" y="40" width="280" height="267"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <mutableString key="text">Original works
+                                        <string key="text">Original works
 HyperCard stack "Cadavre Exquis ver2.1"
 Copyright © 1994 Akiyoshi Sumi, All Rights Reserved.
 
@@ -98,7 +98,7 @@ FBNetworkReachability
 Copyright © 2011 Hiroshi Hashiguchi. Licensed under the MIT License.
 
 Port to iOS
-Copyright © 2012 Tragile-Eden*.</mutableString>
+Copyright © 2012 Tragile-Eden*.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -196,6 +196,7 @@ Copyright © 2012 Tragile-Eden*.</mutableString>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Share" image="outbox_24.png" id="YdC-VF-hoi"/>
+                    <navigationItem key="navigationItem" id="g90-jL-ZCJ"/>
                     <connections>
                         <outlet property="mailButton" destination="j21-91-Rag" id="Vtv-gD-X1i"/>
                         <outlet property="textView" destination="YOg-4v-A5P" id="brq-fP-zzG"/>
@@ -475,34 +476,66 @@ Copyright © 2012 Tragile-Eden*.</mutableString>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
                 <viewController title="History" id="3" customClass="HistoryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZZr-O0-A7D">
-                                <rect key="frame" x="0.0" y="44" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="action" textLabel="zWr-DS-2L1" style="IBUITableViewCellStyleDefault" id="8DG-KP-bop">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zWr-DS-2L1">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="ZVx-z3-7ZP" kind="push" identifier="action" id="1QI-8W-G3i"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="3" id="vZ5-tR-txU"/>
+                                    <outlet property="delegate" destination="3" id="sWo-W4-A8e"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" id="OjO-aB-72r">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="History" id="qi8-s0-sS8"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="History" image="book_24.png" id="6"/>
+                    <navigationItem key="navigationItem" title="History" id="cXm-mh-eyk"/>
                     <connections>
                         <outlet property="historyTable" destination="ZZr-O0-A7D" id="2lh-Yb-vfp"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="857" y="-447"/>
+            <point key="canvasLocation" x="1368" y="-447"/>
+        </scene>
+        <!--View Controller - Share-->
+        <scene sceneID="RLh-NK-6vf">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuE-ah-GCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="historyAction" id="ZVx-z3-7ZP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y8G-gO-xNd">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Share" id="a86-iE-lQw"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1828" y="-447"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -517,7 +550,7 @@ Copyright © 2012 Tragile-Eden*.</mutableString>
                     </tabBar>
                     <connections>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
+                        <segue destination="0EC-Zw-mhV" kind="relationship" relationship="viewControllers" id="27"/>
                         <segue destination="bX9-tp-BLr" kind="relationship" relationship="viewControllers" id="M2m-Cw-U2O"/>
                         <segue destination="jTP-ZD-Rd0" kind="relationship" relationship="viewControllers" id="pFg-BF-Hm0"/>
                         <segue destination="egL-Vx-qbP" kind="relationship" relationship="viewControllers" id="Z5v-Uz-6yq"/>
@@ -525,6 +558,25 @@ Copyright © 2012 Tragile-Eden*.</mutableString>
                 </tabBarController>
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
+        </scene>
+        <!--Navigation Controller - History-->
+        <scene sceneID="9qR-CW-S2Q">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wGb-LG-glr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="0EC-Zw-mhV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="book_24.png" id="6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h4g-7P-tWb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3" kind="relationship" relationship="rootViewController" id="fdn-Qy-aJ1"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="895" y="-447"/>
         </scene>
     </scenes>
     <resources>
@@ -542,6 +594,6 @@ Copyright © 2012 Tragile-Eden*.</mutableString>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="RKU-ah-NCy"/>
-        <segue reference="lbc-2s-VN8"/>
+        <segue reference="89a-kn-o3u"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -18,6 +18,7 @@
 //
 
 #import "HistoryViewController.h"
+#import "ActionViewController.h"
 #import "AppDelegate.h"
 #import "History.h"
 
@@ -52,6 +53,14 @@
         return YES;
     }
 }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    ActionViewController* controller = (ActionViewController*)[segue destinationViewController];
+    NSLog(@"history segure called");
+    if ([[segue identifier] isEqualToString:@"action"]) {
+//        UITableViewCell* target = [historyTable cellForRowAtIndexPath:[historyTable indexPathForSelectedRow]];
+//        [[controller textView] setText:target.textLabel.text];
+    }
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -59,9 +68,10 @@
     return [proxy counts:@"History" withType:-1];
 }
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {	
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"action"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"action"];
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     }
     NSUInteger row = [indexPath row];
     History* history = (History*)[proxy selectAt:@"History" withType:-1 ascending:NO indexOf:row];
