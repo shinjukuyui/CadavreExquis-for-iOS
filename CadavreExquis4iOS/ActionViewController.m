@@ -20,6 +20,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <Twitter/Twitter.h>
 #import <Accounts/Accounts.h>
+#import <Accounts/ACAccountCredential.h>
 #import "ActionViewController.h"
 #import "AppDelegate.h"
 #import "FBNetworkReachability.h"
@@ -112,7 +113,9 @@
                  if (accounts != nil && [accounts count] > 0) {
                      for (int i = 0; i < [accounts count]; i++) {
                          ACAccount* account = (ACAccount*)[accounts objectAtIndex:i];
-                         [twitterAccounts addObject:[account identifier]];
+                         if ([[account accountType] accessGranted]) {
+                             [twitterAccounts addObject:[account identifier]];
+                         }
                      }
                      [tweetButton setHidden:NO];
                      [tweetButton setEnabled:YES];
@@ -204,9 +207,16 @@
                 [accountSelector setDelegate:self];
                 accountSelector.title = NSLocalizedString(@"SelectAccount", nil);
                 ACAccountStore* accountStore = [[ACAccountStore alloc] init];
+                BOOL granted = NO;
                 for (NSString* twitterAccount in twitterAccounts) {
                     ACAccount* account = [accountStore accountWithIdentifier:twitterAccount];
-                    [accountSelector addButtonWithTitle:account.username];
+                    if ([[account accountType] accessGranted]) {
+                        [accountSelector addButtonWithTitle:account.username];
+                        granted = YES;
+                    }
+                }
+                if (!granted) {
+                    [self alert:NSLocalizedString(@"Error", nil) withMessage:NSLocalizedString(@"NoAccount", nil)];
                 }
                 [accountSelector addButtonWithTitle:NSLocalizedString(@"CancelButtonLabel", nil)];
                 [accountSelector setCancelButtonIndex:[twitterAccounts count]];
