@@ -85,7 +85,7 @@
     
 	struct ifaddrs * addrs;
 	const struct ifaddrs * cursor;
-    
+    struct in_addr addr;
     NSString* addressStringForWiFi = nil;
     NSString* addressStringForWWAN = nil;
 	
@@ -96,14 +96,20 @@
 				&& (cursor->ifa_flags & IFF_LOOPBACK) == 0) {
 				NSString *name =
 				[NSString stringWithUTF8String:cursor->ifa_name];
-				
+                addr.s_addr = ((struct sockaddr_in *)(cursor->ifa_addr))->sin_addr.s_addr;
+				NSLog(@"%@", name);
+                NSLog(@"%s", inet_ntoa(addr));
+                NSLog(@"%s", inet_ntoa(((struct sockaddr_in *)cursor->ifa_addr)->sin_addr));
                 // found the WiFi adapter
-				if ([name isEqualToString:@"en0"] ||	// iPhone
-					[name isEqualToString:@"en1"]) {	// Simulator (Mac)
-					addressStringForWiFi = [NSString stringWithUTF8String:
-                                            inet_ntoa(((struct sockaddr_in *)cursor->ifa_addr)->sin_addr)];
-				} else {
+                // en0.. iphone:en0, simulator:enx (according to base mac's adaptor)
+                // iPhoneシミュレータの時は、シミュレータを実行しているMacのインターフェイスが全部列挙されるのでシミュレータの時はen1とは限らない
+                // インターフェイス名がenで始まっていたらネットワーク接続があると見なす
+                NSRange range = [name rangeOfString:@"en"];
+                if (range.location == NSNotFound) {
                     addressStringForWWAN = [NSString stringWithUTF8String:
+                                            inet_ntoa(((struct sockaddr_in *)cursor->ifa_addr)->sin_addr)];
+                } else {
+					addressStringForWiFi = [NSString stringWithUTF8String:
                                             inet_ntoa(((struct sockaddr_in *)cursor->ifa_addr)->sin_addr)];
                 }
 			}
