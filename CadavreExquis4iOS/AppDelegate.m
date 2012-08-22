@@ -27,6 +27,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    UITabBarController* _tabBarController = (UITabBarController *)_window.rootViewController;
+    _tabBarController.delegate = self;
     return YES;
 }
 							
@@ -57,4 +59,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(void) tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    if ([viewController isKindOfClass:[UINavigationController class]]) {
+		[(UINavigationController*)viewController popToRootViewControllerAnimated:NO];
+	}
+}
 @end

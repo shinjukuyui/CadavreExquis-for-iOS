@@ -85,7 +85,6 @@
     
 	struct ifaddrs * addrs;
 	const struct ifaddrs * cursor;
-    struct in_addr addr;
     NSString* addressStringForWiFi = nil;
     NSString* addressStringForWWAN = nil;
 	
@@ -96,10 +95,6 @@
 				&& (cursor->ifa_flags & IFF_LOOPBACK) == 0) {
 				NSString *name =
 				[NSString stringWithUTF8String:cursor->ifa_name];
-                addr.s_addr = ((struct sockaddr_in *)(cursor->ifa_addr))->sin_addr.s_addr;
-				NSLog(@"%@", name);
-                NSLog(@"%s", inet_ntoa(addr));
-                NSLog(@"%s", inet_ntoa(((struct sockaddr_in *)cursor->ifa_addr)->sin_addr));
                 // found the WiFi adapter
                 // en0.. iphone:en0, simulator:enx (according to base mac's adaptor)
                 // iPhoneシミュレータの時は、シミュレータを実行しているMacのインターフェイスが全部列挙されるのでシミュレータの時はen1とは限らない

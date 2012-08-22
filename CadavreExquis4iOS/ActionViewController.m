@@ -33,12 +33,14 @@
 @synthesize textView;
 @synthesize mailButton;
 @synthesize tweetButton;
+@synthesize historyText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        historyText = nil;
     }
     return self;
 }
@@ -67,8 +69,13 @@
         [mailButton setHidden:YES];
         [tweetButton setHidden:YES];
     } else {
-        AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-        NSString* sentence = [delegate.homeViewController getSentence];
+        NSString* sentence = nil;
+        if (historyText != nil) {
+            sentence = historyText;
+        } else {
+            AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+            sentence = [delegate.homeViewController getSentence];
+        }
         if (sentence != nil && [sentence length] != 0) {
             if (twitterAccounts == nil) {
                 [self prepareTweet];
@@ -96,6 +103,10 @@
             [tweetButton setHidden:YES];
         }
     }
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    historyText = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

@@ -5,15 +5,12 @@ More details, see ReadMe.txt (written in japanese)
 Original works on Hypercard: Akiyoshi Sumi.
 Porting to iOS: shinjukuyui (Tragile-Eden*).
 License under Apache License 2.0.
-see License.
 
 This project uses FBNetworkReachability.
  by Hiroshi Hashiguchi.
  Licensed under MIT License.
- (Modified for ARC by shinjukuyui)
- see License-FBNetworkReachability
+ (Modified for ARC and iPhone Simulator by shinjukuyui)
 
-Icon images for tabs (CadavreExquis4iOS/images/*_24.png, *_24@2x.png) uses TWG Ratina Icons.
+Icon images for tabs (CadavreExquis4iOS/images/*_24.png, *_24@2x.png) uses TWG Retina Display Icon Set.
 by The Working Group.
 Licensed under Creative Commons Attribution Share-Alike 3.0.
-see License-TWGRatinaIcons

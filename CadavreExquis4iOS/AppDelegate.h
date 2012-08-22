@@ -21,7 +21,7 @@
 #import "HomeViewController.h"
 #import "HistoryViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate> {
     HomeViewController* homeViewController;
 }
 

@@ -28,6 +28,7 @@
 @property (nonatomic, strong) IBOutlet UITextView* textView;
 @property (nonatomic, strong) IBOutlet UIButton* mailButton;
 @property (nonatomic, strong) IBOutlet UIButton* tweetButton;
+@property (nonatomic, strong) NSString* historyText;
 - (IBAction)mail;
 - (IBAction)tweet;
 @end

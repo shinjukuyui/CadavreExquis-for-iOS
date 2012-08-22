@@ -54,11 +54,10 @@
     }
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    ActionViewController* controller = (ActionViewController*)[segue destinationViewController];
-    NSLog(@"history segure called");
+    ActionViewController* controller = (ActionViewController*)[segue destinationViewController];
     if ([[segue identifier] isEqualToString:@"action"]) {
-//        UITableViewCell* target = [historyTable cellForRowAtIndexPath:[historyTable indexPathForSelectedRow]];
-//        [[controller textView] setText:target.textLabel.text];
+        UITableViewCell* target = [historyTable cellForRowAtIndexPath:[historyTable indexPathForSelectedRow]];
+        controller.historyText = target.textLabel.text;
     }
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
