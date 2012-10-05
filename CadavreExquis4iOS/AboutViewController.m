@@ -27,6 +27,7 @@
 
 @implementation AboutViewController
 @synthesize textView;
+@synthesize button;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,6 +44,10 @@
 	// Do any additional setup after loading the view.
     textView.layer.borderWidth = 1;
     textView.layer.borderColor = [[UIColor grayColor] CGColor];
+    if ([UIScreen mainScreen].bounds.size.height >= 568) {
+//        [textView setBounds:CGRectMake(20, 129, 280, 352)];
+//        [button setBounds:CGRectMake(20, 489, 280, 37)];
+    }
 }
 
 - (void)viewDidUnload

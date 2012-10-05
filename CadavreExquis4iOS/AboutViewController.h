@@ -22,5 +22,6 @@
 @interface AboutViewController : UIViewController {
 }
 @property (nonatomic, strong) IBOutlet UITextView* textView;
+@property (nonatomic, strong) IBOutlet UIButton* button;
 - (IBAction)help;
 @end

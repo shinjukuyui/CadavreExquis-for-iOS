@@ -43,6 +43,10 @@
     [self adjust];
     AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     [delegate setHomeViewController:self];
+    if ([UIScreen mainScreen].bounds.size.height >= 568) {
+        UIImage* image = [UIImage imageNamed:@"ce4iosT.jpg"];
+        [backgroundView setImage:image];
+    }
     [self initialize];
 }
 
@@ -51,7 +55,6 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
@@ -59,6 +62,9 @@
     } else {
         return YES;
     }
+}
+-(bool)shouldAutoRotate {
+    return NO;
 }
 #pragma mark - dictionary licensed by 
 - (void) initialize {
