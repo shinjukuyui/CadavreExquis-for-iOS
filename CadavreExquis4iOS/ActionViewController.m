@@ -17,7 +17,6 @@
 //  limitations under the License.
 //
 
-#import <QuartzCore/QuartzCore.h>
 #import <Twitter/Twitter.h>
 #import <Accounts/Accounts.h>
 #import <Accounts/ACAccountCredential.h>
@@ -51,8 +50,7 @@
 	// Do any additional setup after loading the view.
     [textView setEditable:NO];
     textView.layer.borderWidth = 1;
-    textView.layer.borderColor = [[UIColor grayColor] CGColor];
-    textView.layer.cornerRadius = 10;
+    textView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     textView.clipsToBounds = YES;
     twitterAccounts = nil;
 }
@@ -116,7 +114,7 @@
 - (void) prepareTweet {
     ACAccountStore* accountStore = [[ACAccountStore alloc] init];
     ACAccountType* accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
-    [accountStore requestAccessToAccountsWithType:accountType withCompletionHandler:^(BOOL granted, NSError *error) {
+    [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
          dispatch_async(dispatch_get_main_queue(), ^{
              if (granted) {
                  twitterAccounts = [[NSMutableArray alloc] init];
@@ -152,7 +150,7 @@
         default:
             break;
     }
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (void) alert:(NSString*)title withMessage:(NSString*) message {
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:title
@@ -174,12 +172,15 @@
     NSString* sentence = [textView text];
     [mailer setSubject:NSLocalizedString(@"CadavreExquis", nil)];
     [mailer setMessageBody:sentence isHTML:NO];
-    [self presentModalViewController:mailer animated:YES];
+    [self presentViewController:mailer animated:YES completion:nil];
 }
 - (void) tweetWithAccount:(NSString*) account {
     NSDictionary* parameter = [NSDictionary dictionaryWithObject:[[textView text] stringByAppendingString:@" #優美なる死体"] forKey:@"status"];
     NSURL* url = [NSURL URLWithString:@"https://api.twitter.com/1/statuses/update.json"];
-    TWRequest* request = [[TWRequest alloc] initWithURL:url parameters:parameter requestMethod:TWRequestMethodPOST];
+    SLRequest* request = [SLRequest requestForServiceType:SLServiceTypeTwitter
+                                            requestMethod:SLRequestMethodPOST
+                                                      URL:url
+                                               parameters:parameter];
     ACAccountStore* accountStore = [[ACAccountStore alloc] init];
     request.account = [accountStore accountWithIdentifier:account];
     // TODO インジケータ

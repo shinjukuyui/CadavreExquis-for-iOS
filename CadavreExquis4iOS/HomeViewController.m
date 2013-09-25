@@ -36,7 +36,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [textView setEditable:NO];
     [textView setOpaque:YES];
-    [textView setTextAlignment:UITextAlignmentCenter];
+    [textView setTextAlignment:NSTextAlignmentCenter];
     [textView setTextColor:[UIColor grayColor]];
     [textView setText:NSLocalizedString(@"TapToStart", nil)];
     textView.alpha = 0.8;
@@ -156,10 +156,15 @@
 }
 - (void) adjust {
     CGRect frame = [textView frame];
-    CGSize size = [textView contentSize];
-    frame.size.height = size.height;
+//    CGSize size = [textView contentSize];
+    CGRect size = [textView.text boundingRectWithSize:CGSizeMake(320, 500)
+                                              options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                           attributes:[NSDictionary dictionaryWithObject:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]
+                                                                                  forKey:NSFontAttributeName]
+                                              context:nil];
+    frame.size.height = size.size.height + 12;
     float height = [[UIScreen mainScreen] applicationFrame].size.height;
-    float offset = (height - size.height) / 2;
+    float offset = (height - size.size.height) / 2;
     frame.origin.y = offset;
     [textView setFrame:frame];
 }
@@ -177,7 +182,7 @@
     sentence = [self createSentence];
     if (sentence != nil) {
         [textView setText:sentence];
-        [textView setTextAlignment:UITextAlignmentLeft];
+        [textView setTextAlignment:NSTextAlignmentLeft];
         [textView setTextColor:[UIColor blackColor]];
         [self addHistory];
         [self adjust];

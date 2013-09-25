@@ -17,7 +17,6 @@
 //  limitations under the License.
 //
 
-#import <QuartzCore/QuartzCore.h>
 #import "DictionaryAddViewController.h"
 #import "Dictionary.h"
 
@@ -48,11 +47,15 @@
 	// Do any additional setup after loading the view.
     proxy = [DictionaryProxy sharedInstance];
     textView.layer.borderWidth = 1;
-    textView.layer.borderColor = [[UIColor grayColor] CGColor];
-    textView.layer.cornerRadius = 10;
+    textView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     textView.clipsToBounds = YES;
+    [textView setEditable:YES];
     [textView setDelegate:self];
     [textView setReturnKeyType:UIReturnKeyDone];
+    [textView setTextContainerInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+//    [textView.textContainer setLineFragmentPadding:0];
+//    UIEdgeInsets edge = textView.textContainerInset;
+//    NSLog(@"%f, %f, %f, %f, %f", edge.top, edge.left, edge.bottom, edge.right, textView.textContainer.lineFragmentPadding); // -> 0, 0, 0, 0, 5
     [messageView setHidden:YES];
 }
 

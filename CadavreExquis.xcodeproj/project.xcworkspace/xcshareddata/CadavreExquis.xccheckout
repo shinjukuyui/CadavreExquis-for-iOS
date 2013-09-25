@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>21A8766F-F787-4759-80EE-D84638F6299E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CadavreExquis</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>63C9A61B-018A-4C0E-8A1A-920B8D5AEBFA</key>
+		<string>ssh://github.com/shinjukuyui/CadavreExquis-for-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CadavreExquis.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>63C9A61B-018A-4C0E-8A1A-920B8D5AEBFA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/shinjukuyui/CadavreExquis-for-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>63C9A61B-018A-4C0E-8A1A-920B8D5AEBFA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>63C9A61B-018A-4C0E-8A1A-920B8D5AEBFA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CadavreExquis4iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

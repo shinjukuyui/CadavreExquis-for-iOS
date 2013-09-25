@@ -108,7 +108,6 @@ static dispatch_queue_t serialQueue;
     }
     [self initializeData];
     NSURL* storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CadavreExquis.sqlite"];
-	NSLog(@"%@",[storeURL absoluteURL]);
     NSError *error = nil;
     coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self model]];
     if (![coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
